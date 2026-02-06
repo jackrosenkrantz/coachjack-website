@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
 import FadeIn from "@/components/FadeIn";
@@ -26,15 +27,34 @@ export default function About() {
       {/* Hero */}
       <section className="hero-gradient min-h-[60vh] flex items-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 30% 50%, var(--color-sage-500) 0%, transparent 50%)' }} />
-        <div className="max-w-4xl mx-auto px-6 py-24 md:py-32 relative">
-          <FadeIn delay={0}>
-            <span className="tag mb-8 inline-block">About Jack</span>
-          </FadeIn>
-          <FadeIn delay={100}>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal-700 leading-[1.1] tracking-tight">
-              {about.hero.headline}
-            </h1>
-          </FadeIn>
+        <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-7">
+              <FadeIn delay={0}>
+                <span className="tag mb-8 inline-block">About Jack</span>
+              </FadeIn>
+              <FadeIn delay={100}>
+                <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal-700 leading-[1.1] tracking-tight">
+                  {about.hero.headline}
+                </h1>
+              </FadeIn>
+            </div>
+            <div className="md:col-span-5 hidden md:block">
+              <FadeIn delay={200} direction="right">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-sage-200/20 rounded-softer rotate-2" />
+                  <Image
+                    src="/images/jack-headshot.jpg"
+                    alt="Jack Rosenkrantz - Executive Coach"
+                    width={500}
+                    height={750}
+                    className="relative rounded-softer shadow-lifted object-cover"
+                    priority
+                  />
+                </div>
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -53,17 +73,32 @@ export default function About() {
 
       {/* The Awakening */}
       <section className="section-dark py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6">
-          <FadeIn>
-            <div className="w-12 h-[2px] bg-sage-500 mb-8" />
-          </FadeIn>
-          <FadeIn delay={100}>
-            <div className="max-w-3xl space-y-6 text-stone-400 leading-relaxed text-lg">
-              {about.awakening.body.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-5 hidden md:block">
+              <FadeIn direction="left">
+                <Image
+                  src="/images/jack-heart.jpg"
+                  alt="Jack Rosenkrantz in meditation, Sedona Arizona"
+                  width={800}
+                  height={533}
+                  className="rounded-softer shadow-lifted object-cover"
+                />
+              </FadeIn>
             </div>
-          </FadeIn>
+            <div className="md:col-span-7">
+              <FadeIn>
+                <div className="w-12 h-[2px] bg-sage-500 mb-8" />
+              </FadeIn>
+              <FadeIn delay={100}>
+                <div className="space-y-6 text-stone-400 leading-relaxed text-lg">
+                  {about.awakening.body.map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
+                </div>
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
 

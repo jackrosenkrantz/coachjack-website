@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
@@ -19,28 +20,47 @@ export default function Home() {
       {/* Hero */}
       <section className="hero-gradient min-h-[90vh] flex items-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 70% 30%, var(--color-sage-500) 0%, transparent 50%)' }} />
-        <div className="max-w-4xl mx-auto px-6 py-24 md:py-32 relative">
-          <FadeIn delay={0}>
-            <span className="tag mb-8 inline-block">Executive Coach &middot; Phoenix, AZ</span>
-          </FadeIn>
-          <FadeIn delay={100}>
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-charcoal-700 leading-[1.1] mb-8 tracking-tight">
-              Leadership is who you are,
-              <br />
-              <span className="text-sage-600">not what you do.</span>
-            </h1>
-          </FadeIn>
-          <FadeIn delay={200}>
-            <p className="text-lg md:text-xl text-stone-500 max-w-xl mb-12 leading-relaxed">
-              {home.hero.subheadline}
-            </p>
-          </FadeIn>
-          <FadeIn delay={300}>
-            <div className="flex flex-wrap gap-4 items-center">
-              <Button href={home.hero.cta.href}>{home.hero.cta.label}</Button>
-              <Button href="/about" variant="secondary">Learn My Story</Button>
+        <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-7">
+              <FadeIn delay={0}>
+                <span className="tag mb-8 inline-block">Executive Coach &middot; Phoenix, AZ</span>
+              </FadeIn>
+              <FadeIn delay={100}>
+                <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-charcoal-700 leading-[1.1] mb-8 tracking-tight">
+                  Leadership is who you are,
+                  <br />
+                  <span className="text-sage-600">not what you do.</span>
+                </h1>
+              </FadeIn>
+              <FadeIn delay={200}>
+                <p className="text-lg md:text-xl text-stone-500 max-w-xl mb-12 leading-relaxed">
+                  {home.hero.subheadline}
+                </p>
+              </FadeIn>
+              <FadeIn delay={300}>
+                <div className="flex flex-wrap gap-4 items-center">
+                  <Button href={home.hero.cta.href}>{home.hero.cta.label}</Button>
+                  <Button href="/about" variant="secondary">Learn My Story</Button>
+                </div>
+              </FadeIn>
             </div>
-          </FadeIn>
+            <div className="md:col-span-5 hidden md:block">
+              <FadeIn delay={200} direction="right">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-sage-200/20 rounded-softer -rotate-3" />
+                  <Image
+                    src="/images/jack-sedona-standing.jpg"
+                    alt="Jack Rosenkrantz - Executive Coach in Sedona, Arizona"
+                    width={600}
+                    height={900}
+                    className="relative rounded-softer shadow-lifted object-cover"
+                    priority
+                  />
+                </div>
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
 

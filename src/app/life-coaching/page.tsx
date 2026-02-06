@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -59,19 +60,32 @@ export default function LifeCoaching() {
 
       {/* Intro */}
       <Section bg="white">
-        <div className="max-w-3xl">
-          <FadeIn>
-            <p className="font-serif text-2xl text-charcoal-600 leading-relaxed mb-8">
-              {lc.intro.opening}
-            </p>
-          </FadeIn>
-          <FadeIn delay={100}>
-            <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
-              {lc.intro.body.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
-          </FadeIn>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-7">
+            <FadeIn>
+              <p className="font-serif text-2xl text-charcoal-600 leading-relaxed mb-8">
+                {lc.intro.opening}
+              </p>
+            </FadeIn>
+            <FadeIn delay={100}>
+              <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
+                {lc.intro.body.map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
+            </FadeIn>
+          </div>
+          <div className="md:col-span-5 hidden md:block">
+            <FadeIn delay={200} direction="right">
+              <Image
+                src="/images/jack-sedona-smiling.jpg"
+                alt="Jack Rosenkrantz - Life Coach in Phoenix, Arizona"
+                width={800}
+                height={533}
+                className="rounded-softer shadow-lifted object-cover"
+              />
+            </FadeIn>
+          </div>
         </div>
       </Section>
 

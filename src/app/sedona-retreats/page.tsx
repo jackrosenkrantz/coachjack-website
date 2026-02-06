@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
@@ -56,16 +57,28 @@ export default function SedonaRetreats() {
 
       {/* Why Sedona */}
       <Section bg="white">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-          <div className="md:col-span-4">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-5">
+            <FadeIn direction="left">
+              <div className="relative">
+                <div className="absolute -inset-3 bg-sage-200/20 rounded-softer -rotate-2" />
+                <Image
+                  src="/images/jack-meditation.jpg"
+                  alt="Jack Rosenkrantz meditating with Sedona red rocks"
+                  width={800}
+                  height={533}
+                  className="relative rounded-softer shadow-lifted object-cover"
+                />
+              </div>
+            </FadeIn>
+          </div>
+          <div className="md:col-span-7">
             <FadeIn>
               <div className="accent-line mb-6" />
-              <h2 className="font-serif text-3xl md:text-4xl text-charcoal-700 md:sticky md:top-24">
+              <h2 className="font-serif text-3xl md:text-4xl text-charcoal-700 mb-8">
                 {sr.whySedona.headline}
               </h2>
             </FadeIn>
-          </div>
-          <div className="md:col-span-8">
             <FadeIn delay={100}>
               <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
                 {sr.whySedona.body.map((paragraph, i) => (
