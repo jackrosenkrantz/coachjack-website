@@ -72,13 +72,16 @@ export default function CoachingForFounders() {
           </div>
           <div className="md:col-span-5 hidden md:block">
             <FadeIn delay={200} direction="right">
-              <Image
-                src="/images/jack-sedona-grounded.jpg"
-                alt="Jack Rosenkrantz - Coach for Founders in Arizona"
-                width={800}
-                height={533}
-                className="rounded-softer shadow-lifted object-cover"
-              />
+              <div className="relative">
+                <div className="absolute -inset-4 bg-sage-200/20 rounded-softer rotate-2" />
+                <Image
+                  src="/images/jack-sedona-grounded.jpg"
+                  alt="Jack Rosenkrantz - Coach for Founders in Arizona"
+                  width={600}
+                  height={750}
+                  className="relative rounded-softer shadow-lifted object-cover w-full"
+                />
+              </div>
             </FadeIn>
           </div>
         </div>

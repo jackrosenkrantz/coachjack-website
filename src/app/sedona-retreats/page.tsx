@@ -82,8 +82,8 @@ export default function SedonaRetreats() {
               <div className="relative">
                 <div className="absolute -inset-3 bg-sage-200/20 rounded-softer -rotate-2" />
                 <Image
-                  src="/images/retreat-leading-meditation.jpg"
-                  alt="Jack Rosenkrantz leading a guided meditation at Sedona retreat"
+                  src="/images/retreat-group-portrait.jpg"
+                  alt="Sedona retreat group photo with red rocks in the background"
                   width={800}
                   height={533}
                   className="relative rounded-softer shadow-lifted object-cover"
@@ -132,10 +132,10 @@ export default function SedonaRetreats() {
               <div className="relative">
                 <div className="absolute -inset-3 bg-sage-200/20 rounded-softer -rotate-2" />
                 <Image
-                  src="/images/retreat-group-meditation.jpg"
-                  alt="Retreat participants in group meditation session"
-                  width={600}
-                  height={900}
+                  src="/images/retreat-group-activity.jpg"
+                  alt="Retreat participants in an interactive group exercise"
+                  width={800}
+                  height={533}
                   className="relative rounded-softer shadow-lifted object-cover"
                 />
               </div>
@@ -168,10 +168,10 @@ export default function SedonaRetreats() {
             <div className="md:col-span-5 hidden md:block">
               <FadeIn direction="left">
                 <Image
-                  src="/images/retreat-writing-sepia.jpg"
-                  alt="Retreat participant writing reflections on wall during breakout session"
-                  width={600}
-                  height={900}
+                  src="/images/retreat-candid-laughing.jpg"
+                  alt="Candid moment of connection and laughter during retreat"
+                  width={800}
+                  height={533}
                   className="rounded-softer shadow-lifted object-cover"
                 />
               </FadeIn>
@@ -214,6 +214,30 @@ export default function SedonaRetreats() {
             <Button href={sr.btb.cta.href} external variant="secondary">
               {sr.btb.cta.label}
             </Button>
+          </div>
+        </FadeIn>
+      </Section>
+
+      {/* Photo Gallery */}
+      <Section bg="cream">
+        <FadeIn>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { src: "/images/retreat-leading-meditation.jpg", alt: "Jack leading guided meditation with props" },
+              { src: "/images/retreat-writing-sepia.jpg", alt: "Reflective writing exercise at retreat" },
+              { src: "/images/retreat-outdoor-conversation.jpg", alt: "One-on-one conversation outdoors in Sedona" },
+              { src: "/images/retreat-group-meditation.jpg", alt: "Group meditation session" },
+            ].map((photo, i) => (
+              <FadeIn key={photo.src} delay={i * 100}>
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  width={400}
+                  height={300}
+                  className="rounded-softer shadow-soft object-cover w-full aspect-[4/3]"
+                />
+              </FadeIn>
+            ))}
           </div>
         </FadeIn>
       </Section>
