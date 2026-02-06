@@ -135,19 +135,28 @@ export default function Home() {
 
       {/* Differentiator */}
       <section className="section-dark py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-            <div className="md:col-span-4">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-5 hidden md:block">
+              <FadeIn direction="left">
+                <Image
+                  src="/images/retreat-writing-sepia.jpg"
+                  alt="Reflective writing exercise at a Sedona leadership retreat"
+                  width={600}
+                  height={900}
+                  className="rounded-softer shadow-lifted object-cover max-h-[500px] w-full"
+                />
+              </FadeIn>
+            </div>
+            <div className="md:col-span-7">
               <FadeIn>
                 <div className="w-12 h-[2px] bg-sage-500 mb-6" />
                 <h2 className="font-serif text-3xl md:text-4xl text-cream-100">
                   {home.differentiator.headline}
                 </h2>
               </FadeIn>
-            </div>
-            <div className="md:col-span-8">
               <FadeIn delay={100}>
-                <div className="space-y-6 text-stone-400 leading-relaxed text-lg">
+                <div className="space-y-6 text-stone-400 leading-relaxed text-lg mt-8">
                   {home.differentiator.body.map((paragraph, i) => (
                     <p key={i}>{paragraph}</p>
                   ))}

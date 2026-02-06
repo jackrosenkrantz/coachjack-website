@@ -120,6 +120,18 @@ export default function About() {
                   <p key={i}>{paragraph}</p>
                 ))}
               </div>
+              <div className="my-10">
+                <div className="relative">
+                  <div className="absolute -inset-3 bg-sage-200/20 rounded-softer -rotate-1" />
+                  <Image
+                    src="/images/retreat-group-meditation.jpg"
+                    alt="Group meditation session at a Sedona retreat led by Jack"
+                    width={800}
+                    height={1200}
+                    className="relative rounded-softer shadow-lifted object-cover w-full max-h-[500px]"
+                  />
+                </div>
+              </div>
               <p className="font-medium text-charcoal-600 mt-8 mb-4 text-lg">
                 {about.work.approachLabel}
               </p>

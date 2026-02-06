@@ -38,20 +38,39 @@ export default function SedonaRetreats() {
       {/* Hero */}
       <section className="hero-gradient min-h-[70vh] flex items-center relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 50% 60%, var(--color-sage-500) 0%, transparent 50%)' }} />
-        <div className="max-w-4xl mx-auto px-6 py-24 md:py-32 relative">
-          <FadeIn delay={0}>
-            <span className="tag mb-8 inline-block">Sedona Retreats</span>
-          </FadeIn>
-          <FadeIn delay={100}>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal-700 leading-[1.1] mb-6 tracking-tight">
-              {sr.hero.headline}
-            </h1>
-          </FadeIn>
-          <FadeIn delay={200}>
-            <p className="text-lg md:text-xl text-stone-500 max-w-2xl leading-relaxed">
-              {sr.hero.subheadline}
-            </p>
-          </FadeIn>
+        <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-7">
+              <FadeIn delay={0}>
+                <span className="tag mb-8 inline-block">Sedona Retreats</span>
+              </FadeIn>
+              <FadeIn delay={100}>
+                <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal-700 leading-[1.1] mb-6 tracking-tight">
+                  {sr.hero.headline}
+                </h1>
+              </FadeIn>
+              <FadeIn delay={200}>
+                <p className="text-lg md:text-xl text-stone-500 max-w-2xl leading-relaxed">
+                  {sr.hero.subheadline}
+                </p>
+              </FadeIn>
+            </div>
+            <div className="md:col-span-5 hidden md:block">
+              <FadeIn delay={200} direction="right">
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-sage-200/20 rounded-softer rotate-2" />
+                  <Image
+                    src="/images/retreat-meditation-wide.jpg"
+                    alt="Group meditation at Sedona leadership retreat"
+                    width={600}
+                    height={900}
+                    className="relative rounded-softer shadow-lifted object-cover"
+                    priority
+                  />
+                </div>
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -63,8 +82,8 @@ export default function SedonaRetreats() {
               <div className="relative">
                 <div className="absolute -inset-3 bg-sage-200/20 rounded-softer -rotate-2" />
                 <Image
-                  src="/images/jack-meditation.jpg"
-                  alt="Jack Rosenkrantz meditating with Sedona red rocks"
+                  src="/images/retreat-leading-meditation.jpg"
+                  alt="Jack Rosenkrantz leading a guided meditation at Sedona retreat"
                   width={800}
                   height={533}
                   className="relative rounded-softer shadow-lifted object-cover"
@@ -92,19 +111,37 @@ export default function SedonaRetreats() {
 
       {/* What to Expect */}
       <Section bg="cream">
-        <FadeIn>
-          <div className="accent-line mb-6" />
-          <h2 className="font-serif text-3xl md:text-4xl text-charcoal-700 mb-6">
-            {sr.whatToExpect.headline}
-          </h2>
-        </FadeIn>
-        <FadeIn delay={100}>
-          <div className="max-w-3xl space-y-6 text-stone-600 leading-relaxed text-lg mb-12">
-            {sr.whatToExpect.body.map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-16">
+          <div className="md:col-span-7">
+            <FadeIn>
+              <div className="accent-line mb-6" />
+              <h2 className="font-serif text-3xl md:text-4xl text-charcoal-700 mb-6">
+                {sr.whatToExpect.headline}
+              </h2>
+            </FadeIn>
+            <FadeIn delay={100}>
+              <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
+                {sr.whatToExpect.body.map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
+            </FadeIn>
           </div>
-        </FadeIn>
+          <div className="md:col-span-5 hidden md:block">
+            <FadeIn delay={200} direction="right">
+              <div className="relative">
+                <div className="absolute -inset-3 bg-sage-200/20 rounded-softer -rotate-2" />
+                <Image
+                  src="/images/retreat-group-meditation.jpg"
+                  alt="Retreat participants in group meditation session"
+                  width={600}
+                  height={900}
+                  className="relative rounded-softer shadow-lifted object-cover"
+                />
+              </div>
+            </FadeIn>
+          </div>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {sr.whatToExpect.items.map((item, i) => (
             <FadeIn key={item.title} delay={i * 100}>
@@ -126,25 +163,40 @@ export default function SedonaRetreats() {
 
       {/* Who It's For */}
       <section className="section-dark py-20 md:py-28">
-        <div className="max-w-4xl mx-auto px-6">
-          <FadeIn>
-            <div className="w-12 h-[2px] bg-sage-500 mb-6" />
-            <h2 className="font-serif text-3xl md:text-4xl text-cream-100 mb-10">
-              {sr.whoItsFor.headline}
-            </h2>
-          </FadeIn>
-          <FadeIn delay={100}>
-            <ul className="space-y-5">
-              {sr.whoItsFor.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-4 text-stone-400">
-                  <span className="w-6 h-6 rounded-full bg-sage-900/50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-sage-400" />
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </FadeIn>
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-5 hidden md:block">
+              <FadeIn direction="left">
+                <Image
+                  src="/images/retreat-writing-sepia.jpg"
+                  alt="Retreat participant writing reflections on wall during breakout session"
+                  width={600}
+                  height={900}
+                  className="rounded-softer shadow-lifted object-cover"
+                />
+              </FadeIn>
+            </div>
+            <div className="md:col-span-7">
+              <FadeIn>
+                <div className="w-12 h-[2px] bg-sage-500 mb-6" />
+                <h2 className="font-serif text-3xl md:text-4xl text-cream-100 mb-10">
+                  {sr.whoItsFor.headline}
+                </h2>
+              </FadeIn>
+              <FadeIn delay={100}>
+                <ul className="space-y-5">
+                  {sr.whoItsFor.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-4 text-stone-400">
+                      <span className="w-6 h-6 rounded-full bg-sage-900/50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-sage-400" />
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
 

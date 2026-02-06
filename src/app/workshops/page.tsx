@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
@@ -38,21 +39,37 @@ export default function Workshops() {
 
       {/* Body */}
       <Section bg="white">
-        <div className="max-w-3xl">
-          <FadeIn>
-            <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
-              {workshops.body.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
-              ))}
-            </div>
-          </FadeIn>
-          <FadeIn delay={100}>
-            <div className="mt-10">
-              <Button href={workshops.cta.href} external>
-                {workshops.cta.label}
-              </Button>
-            </div>
-          </FadeIn>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-7">
+            <FadeIn>
+              <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
+                {workshops.body.map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
+            </FadeIn>
+            <FadeIn delay={100}>
+              <div className="mt-10">
+                <Button href={workshops.cta.href} external>
+                  {workshops.cta.label}
+                </Button>
+              </div>
+            </FadeIn>
+          </div>
+          <div className="md:col-span-5 hidden md:block">
+            <FadeIn delay={200} direction="right">
+              <div className="relative">
+                <div className="absolute -inset-3 bg-sage-200/20 rounded-softer rotate-2" />
+                <Image
+                  src="/images/retreat-leading-meditation.jpg"
+                  alt="Jack leading a group workshop with meditation props"
+                  width={800}
+                  height={533}
+                  className="relative rounded-softer shadow-lifted object-cover"
+                />
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </Section>
 
