@@ -5,6 +5,7 @@ import { useState } from "react";
 import { siteContent } from "@/lib/site-content";
 
 const links = siteContent.nav.links;
+const cta = siteContent.nav.cta;
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -30,6 +31,12 @@ export default function Nav() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href={cta.href}
+            className="inline-flex items-center justify-center px-6 py-2 bg-charcoal-700 text-cream-100 text-sm font-medium tracking-wide rounded-soft hover:bg-charcoal-600 transition-colors shadow-soft hover:shadow-medium"
+          >
+            {cta.label}
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -78,6 +85,13 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href={cta.href}
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center justify-center px-6 py-2 bg-charcoal-700 text-cream-100 text-sm font-medium tracking-wide rounded-soft hover:bg-charcoal-600 transition-colors mt-2"
+            >
+              {cta.label}
+            </Link>
           </div>
         </div>
       )}

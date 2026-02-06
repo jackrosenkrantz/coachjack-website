@@ -18,15 +18,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: siteContent.meta.home.title,
+  title: {
+    default: siteContent.meta.home.title,
+    template: "%s",
+  },
   description: siteContent.meta.home.description,
   metadataBase: new URL("https://coachjack.xyz"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: siteContent.meta.home.title,
     description: siteContent.meta.home.description,
     url: "https://coachjack.xyz",
     siteName: siteContent.siteName,
     type: "website",
+    locale: "en_US",
   },
 };
 

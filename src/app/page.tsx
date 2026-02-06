@@ -1,7 +1,9 @@
+import Link from "next/link";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
+import JsonLd, { localBusinessSchema, organizationSchema } from "@/components/JsonLd";
 import { getFeaturedTestimonials } from "@/lib/testimonials";
 import { siteContent } from "@/lib/site-content";
 
@@ -10,6 +12,9 @@ const home = siteContent.home;
 export default function Home() {
   return (
     <>
+      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={organizationSchema} />
+
       {/* Hero */}
       <section className="bg-cream-100 min-h-[85vh] flex items-center">
         <div className="max-w-4xl mx-auto px-6 py-24 md:py-32">
@@ -56,7 +61,7 @@ export default function Home() {
         <h2 className="font-serif text-3xl md:text-4xl text-charcoal-700 mb-12 text-center">
           How we can work together
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {home.services.map((service) => (
             <ServiceCard
               key={service.title}
@@ -81,6 +86,32 @@ export default function Home() {
         </div>
         <div className="mt-10">
           <Button href="/about">Read My Story</Button>
+        </div>
+      </Section>
+
+      {/* Resources */}
+      <Section bg="white">
+        <h2 className="font-serif text-3xl md:text-4xl text-charcoal-700 mb-8 text-center">
+          {home.resources.headline}
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {home.resources.items.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="block bg-cream-100 border border-stone-200/60 rounded-soft p-8 hover:shadow-medium hover:border-stone-300 transition-all"
+            >
+              <h3 className="font-serif text-xl text-charcoal-700 mb-3">
+                {item.title}
+              </h3>
+              <p className="text-stone-600 leading-relaxed text-sm">
+                {item.description}
+              </p>
+              <span className="inline-block mt-4 text-sage-600 text-sm font-medium">
+                Read more &rarr;
+              </span>
+            </Link>
+          ))}
         </div>
       </Section>
     </>

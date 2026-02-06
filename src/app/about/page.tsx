@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
+import JsonLd, { personSchema } from "@/components/JsonLd";
 import { siteContent } from "@/lib/site-content";
 
 const about = siteContent.about;
@@ -8,11 +10,19 @@ const about = siteContent.about;
 export const metadata: Metadata = {
   title: siteContent.meta.about.title,
   description: siteContent.meta.about.description,
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: siteContent.meta.about.title,
+    description: siteContent.meta.about.description,
+    url: "https://coachjack.xyz/about",
+  },
 };
 
 export default function About() {
   return (
     <>
+      <JsonLd data={personSchema} />
+
       {/* Header */}
       <Section bg="cream">
         <h1 className="font-serif text-4xl md:text-5xl text-charcoal-700 mb-6">
@@ -47,7 +57,9 @@ export default function About() {
           {about.work.body.map((paragraph, i) => (
             <p key={i}>{paragraph}</p>
           ))}
-          <p className="font-medium text-charcoal-600">{about.work.approachLabel}</p>
+          <p className="font-medium text-charcoal-600">
+            {about.work.approachLabel}
+          </p>
           <ul className="space-y-3 text-stone-600">
             {about.work.bullets.map((bullet, i) => (
               <li key={i} className="flex items-start gap-3">
@@ -74,6 +86,41 @@ export default function About() {
             ))}
           </ul>
           <p className="italic pt-2">{about.credentials.personal}</p>
+        </div>
+      </Section>
+
+      {/* Internal Links */}
+      <Section bg="white">
+        <div className="max-w-3xl space-y-4 text-stone-600">
+          <h2 className="font-serif text-2xl text-charcoal-700 mb-4">
+            Work with Jack
+          </h2>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/executive-coaching"
+              className="text-sage-600 hover:text-sage-700 font-medium transition-colors"
+            >
+              Executive Coaching &rarr;
+            </Link>
+            <Link
+              href="/life-coaching"
+              className="text-sage-600 hover:text-sage-700 font-medium transition-colors"
+            >
+              Life Coaching &rarr;
+            </Link>
+            <Link
+              href="/coaching-for-founders"
+              className="text-sage-600 hover:text-sage-700 font-medium transition-colors"
+            >
+              Coaching for Founders &rarr;
+            </Link>
+            <Link
+              href="/sedona-retreats"
+              className="text-sage-600 hover:text-sage-700 font-medium transition-colors"
+            >
+              Sedona Retreats &rarr;
+            </Link>
+          </div>
         </div>
       </Section>
 

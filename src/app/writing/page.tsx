@@ -8,6 +8,12 @@ const writing = siteContent.writing;
 export const metadata: Metadata = {
   title: siteContent.meta.writing.title,
   description: siteContent.meta.writing.description,
+  alternates: { canonical: "/writing" },
+  openGraph: {
+    title: siteContent.meta.writing.title,
+    description: siteContent.meta.writing.description,
+    url: "https://coachjack.xyz/writing",
+  },
 };
 
 export default function Writing() {
