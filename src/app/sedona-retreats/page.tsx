@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
+import FadeIn from "@/components/FadeIn";
 import JsonLd, { createServiceSchema, localBusinessSchema } from "@/components/JsonLd";
 import { siteContent } from "@/lib/site-content";
 
@@ -33,141 +34,193 @@ export default function SedonaRetreats() {
       <JsonLd data={sedonaServiceSchema} />
       <JsonLd data={localBusinessSchema} />
 
-      {/* Header */}
-      <Section bg="cream">
-        <h1 className="font-serif text-4xl md:text-5xl text-charcoal-700 mb-4">
-          {sr.hero.headline}
-        </h1>
-        <p className="text-xl text-stone-500">{sr.hero.subheadline}</p>
-      </Section>
+      {/* Hero */}
+      <section className="hero-gradient min-h-[70vh] flex items-center relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 50% 60%, var(--color-sage-500) 0%, transparent 50%)' }} />
+        <div className="max-w-4xl mx-auto px-6 py-24 md:py-32 relative">
+          <FadeIn delay={0}>
+            <span className="tag mb-8 inline-block">Sedona Retreats</span>
+          </FadeIn>
+          <FadeIn delay={100}>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal-700 leading-[1.1] mb-6 tracking-tight">
+              {sr.hero.headline}
+            </h1>
+          </FadeIn>
+          <FadeIn delay={200}>
+            <p className="text-lg md:text-xl text-stone-500 max-w-2xl leading-relaxed">
+              {sr.hero.subheadline}
+            </p>
+          </FadeIn>
+        </div>
+      </section>
 
       {/* Why Sedona */}
       <Section bg="white">
-        <h2 className="font-serif text-3xl text-charcoal-700 mb-8">
-          {sr.whySedona.headline}
-        </h2>
-        <div className="max-w-3xl space-y-6 text-stone-600 leading-relaxed">
-          {sr.whySedona.body.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+          <div className="md:col-span-4">
+            <FadeIn>
+              <div className="accent-line mb-6" />
+              <h2 className="font-serif text-3xl md:text-4xl text-charcoal-700 md:sticky md:top-24">
+                {sr.whySedona.headline}
+              </h2>
+            </FadeIn>
+          </div>
+          <div className="md:col-span-8">
+            <FadeIn delay={100}>
+              <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
+                {sr.whySedona.body.map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </Section>
 
       {/* What to Expect */}
       <Section bg="cream">
-        <h2 className="font-serif text-3xl text-charcoal-700 mb-6">
-          {sr.whatToExpect.headline}
-        </h2>
-        <div className="max-w-3xl space-y-6 text-stone-600 leading-relaxed mb-8">
-          {sr.whatToExpect.body.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
-        </div>
+        <FadeIn>
+          <div className="accent-line mb-6" />
+          <h2 className="font-serif text-3xl md:text-4xl text-charcoal-700 mb-6">
+            {sr.whatToExpect.headline}
+          </h2>
+        </FadeIn>
+        <FadeIn delay={100}>
+          <div className="max-w-3xl space-y-6 text-stone-600 leading-relaxed text-lg mb-12">
+            {sr.whatToExpect.body.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+        </FadeIn>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {sr.whatToExpect.items.map((item) => (
-            <div
-              key={item.title}
-              className="bg-white border border-stone-200/60 p-8"
-            >
-              <h3 className="font-serif text-lg text-charcoal-700 mb-3">
-                {item.title}
-              </h3>
-              <p className="text-stone-600 text-sm leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
+          {sr.whatToExpect.items.map((item, i) => (
+            <FadeIn key={item.title} delay={i * 100}>
+              <div className="bg-white border border-stone-200/60 rounded-softer p-8 hover:shadow-soft transition-all duration-300 h-full">
+                <div className="number-accent mb-4">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <h3 className="font-serif text-lg text-charcoal-700 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-stone-600 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            </FadeIn>
           ))}
         </div>
       </Section>
 
       {/* Who It's For */}
-      <Section bg="white">
-        <h2 className="font-serif text-3xl text-charcoal-700 mb-8">
-          {sr.whoItsFor.headline}
-        </h2>
-        <div className="max-w-3xl space-y-4 text-stone-600 leading-relaxed">
-          <ul className="space-y-4">
-            {sr.whoItsFor.items.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="text-sage-500 mt-1.5 text-xs">&bull;</span>
-                {item}
-              </li>
-            ))}
-          </ul>
+      <section className="section-dark py-20 md:py-28">
+        <div className="max-w-4xl mx-auto px-6">
+          <FadeIn>
+            <div className="w-12 h-[2px] bg-sage-500 mb-6" />
+            <h2 className="font-serif text-3xl md:text-4xl text-cream-100 mb-10">
+              {sr.whoItsFor.headline}
+            </h2>
+          </FadeIn>
+          <FadeIn delay={100}>
+            <ul className="space-y-5">
+              {sr.whoItsFor.items.map((item, i) => (
+                <li key={i} className="flex items-start gap-4 text-stone-400">
+                  <span className="w-6 h-6 rounded-full bg-sage-900/50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-sage-400" />
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </FadeIn>
         </div>
-      </Section>
+      </section>
 
       {/* BTB */}
-      <Section bg="sage">
-        <h2 className="font-serif text-3xl text-charcoal-700 mb-6">
-          {sr.btb.headline}
-        </h2>
-        <p className="text-stone-600 leading-relaxed max-w-3xl mb-8">
-          {sr.btb.body}
-        </p>
-        <Button href={sr.btb.cta.href} external variant="secondary">
-          {sr.btb.cta.label}
-        </Button>
+      <Section bg="white">
+        <FadeIn>
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="accent-line mx-auto mb-6" />
+            <h2 className="font-serif text-3xl md:text-4xl text-charcoal-700 mb-6">
+              {sr.btb.headline}
+            </h2>
+            <p className="text-stone-600 leading-relaxed text-lg mb-8">
+              {sr.btb.body}
+            </p>
+            <Button href={sr.btb.cta.href} external variant="secondary">
+              {sr.btb.cta.label}
+            </Button>
+          </div>
+        </FadeIn>
       </Section>
 
       {/* Logistics */}
-      <Section bg="white">
-        <h2 className="font-serif text-3xl text-charcoal-700 mb-8">
-          {sr.logistics.headline}
-        </h2>
-        <div className="max-w-3xl space-y-3 text-stone-600">
-          <ul className="space-y-3">
+      <Section bg="cream">
+        <FadeIn>
+          <div className="accent-line mb-6" />
+          <h2 className="font-serif text-3xl md:text-4xl text-charcoal-700 mb-10">
+            {sr.logistics.headline}
+          </h2>
+        </FadeIn>
+        <FadeIn delay={100}>
+          <div className="max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-4">
             {sr.logistics.items.map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="text-sage-500 mt-1.5 text-xs">&bull;</span>
-                {item}
-              </li>
+              <div key={i} className="flex items-start gap-4 bg-white border border-stone-200/60 rounded-softer p-5">
+                <span className="w-6 h-6 rounded-full bg-sage-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sage-500" />
+                </span>
+                <span className="text-stone-600 text-sm">{item}</span>
+              </div>
             ))}
-          </ul>
-        </div>
+          </div>
+        </FadeIn>
       </Section>
 
       {/* CTA */}
-      <Section bg="cream">
-        <div className="text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-charcoal-700 mb-6">
-            {sr.cta.text}
-          </h2>
-          <Button href={sr.cta.href}>{sr.cta.label}</Button>
+      <section className="section-sage py-20 md:py-28">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <FadeIn>
+            <p className="text-sage-300 text-sm uppercase tracking-widest font-medium mb-6">Ready?</p>
+            <h2 className="font-serif text-3xl md:text-4xl text-cream-100 mb-6">
+              {sr.cta.text}
+            </h2>
+            <Link
+              href={sr.cta.href}
+              className="inline-flex items-center justify-center px-10 py-4 bg-cream-100 text-charcoal-700 text-sm font-medium tracking-wide rounded-soft hover:bg-white transition-colors shadow-medium"
+            >
+              {sr.cta.label}
+            </Link>
+          </FadeIn>
         </div>
-      </Section>
+      </section>
 
       {/* Internal Links */}
-      <Section bg="white">
-        <div className="max-w-3xl text-stone-600">
-          <p className="mb-4">Explore other ways to work together:</p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              href="/executive-coaching"
-              className="text-sage-600 hover:text-sage-700 font-medium transition-colors"
-            >
-              Executive Coaching &rarr;
-            </Link>
-            <Link
-              href="/coaching-for-founders"
-              className="text-sage-600 hover:text-sage-700 font-medium transition-colors"
-            >
-              Coaching for Founders &rarr;
-            </Link>
-            <Link
-              href="/about"
-              className="text-sage-600 hover:text-sage-700 font-medium transition-colors"
-            >
-              About Jack &rarr;
-            </Link>
-            <Link
-              href="/contact"
-              className="text-sage-600 hover:text-sage-700 font-medium transition-colors"
-            >
-              Get in Touch &rarr;
-            </Link>
+      <Section bg="cream">
+        <FadeIn>
+          <div className="max-w-3xl">
+            <p className="text-stone-500 text-sm uppercase tracking-widest font-medium mb-6">
+              Explore more
+            </p>
+            <div className="flex flex-wrap gap-4">
+              {[
+                { href: "/executive-coaching", label: "Executive Coaching" },
+                { href: "/coaching-for-founders", label: "Coaching for Founders" },
+                { href: "/about", label: "About Jack" },
+                { href: "/contact", label: "Get in Touch" },
+              ].map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="group inline-flex items-center gap-2 text-sage-600 hover:text-sage-700 font-medium transition-colors"
+                >
+                  {link.label}
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="transition-transform group-hover:translate-x-1">
+                    <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
+        </FadeIn>
       </Section>
     </>
   );
