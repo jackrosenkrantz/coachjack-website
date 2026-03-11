@@ -42,10 +42,6 @@ export const siteContent = {
       },
     },
 
-    proofStrip: {
-      label: "Trusted by founders and executives at",
-    },
-
     philosophy: {
       headline: "Transformation is subtraction, not addition.",
       body: "You don\u2019t need another framework. Another productivity system. Another version of yourself to perform. The leaders who change the world are the ones who stop performing leadership and start practicing presence\u2014who lead from alignment, not expectation. That\u2019s the work.",

@@ -59,26 +59,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof Strip */}
-      <div className="proof-strip py-6">
-        <div className="max-w-6xl mx-auto px-6">
-          <FadeIn>
-            <p className="text-warm-gray text-xs uppercase tracking-widest font-medium mb-4">
-              {home.proofStrip.label}
-            </p>
-            <div className="flex flex-wrap gap-x-10 gap-y-3">
-              {getTestimonialsForContext("homepage")
-                .filter((t) => t.company)
-                .map((t) => (
-                  <span key={t.id} className="proof-strip-item text-earth text-sm">
-                    {t.company}
-                  </span>
-                ))}
-            </div>
-          </FadeIn>
-        </div>
-      </div>
-
       {/* Philosophy */}
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
