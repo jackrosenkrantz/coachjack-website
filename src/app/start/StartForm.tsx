@@ -101,7 +101,7 @@ export default function StartForm() {
           <a
             href={
               process.env.NEXT_PUBLIC_CALENDLY_URL ||
-              "https://calendly.com/jackrosenkrantz"
+              "https://calendly.com/jackrosenkrantz/30min?back=1&month=2026-03"
             }
             target="_blank"
             rel="noopener noreferrer"
