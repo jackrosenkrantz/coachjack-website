@@ -105,11 +105,3 @@ export function getTestimonialsForContext(
   return testimonials.filter((t) => t.contexts.includes(context));
 }
 
-// Legacy helpers (maintained for backward compatibility during migration)
-export const getFeaturedTestimonials = (): Testimonial[] => {
-  return getTestimonialsForContext("homepage");
-};
-
-export const getAllTestimonials = (): Testimonial[] => {
-  return testimonials;
-};
