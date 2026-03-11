@@ -45,10 +45,10 @@ export default function Home() {
               <FadeIn delay={200} direction="right">
                 <div className="photo-cinematic relative rounded-softer overflow-hidden">
                   <Image
-                    src="/images/jack-sedona-standing.jpg"
+                    src="/images/jack-heart.jpg"
                     alt="Jack Rosenkrantz - Executive Coach in Sedona, Arizona"
-                    width={600}
-                    height={900}
+                    width={800}
+                    height={533}
                     className="relative rounded-softer shadow-lifted object-cover"
                     priority
                   />
