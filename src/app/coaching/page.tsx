@@ -56,10 +56,10 @@ export default function Coaching() {
               <FadeIn delay={200} direction="right">
                 <div className="photo-amber relative rounded-softer overflow-hidden">
                   <Image
-                    src="/images/jack-chair.jpg"
-                    alt="Jack Rosenkrantz in a coaching session"
-                    width={500}
-                    height={750}
+                    src="/images/retreat-254.jpg"
+                    alt="Jack Rosenkrantz smiling in Sedona, Arizona"
+                    width={1200}
+                    height={800}
                     className="rounded-softer shadow-lifted object-cover"
                     priority
                   />
@@ -92,6 +92,23 @@ export default function Coaching() {
           ))}
         </div>
       </Section>
+
+      {/* Visual break — presence */}
+      <div className="py-12 md:py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <FadeIn>
+            <div className="photo-dark relative rounded-softer overflow-hidden">
+              <Image
+                src="/images/retreat-196.jpg"
+                alt="Jack Rosenkrantz in meditation practice"
+                width={1200}
+                height={800}
+                className="rounded-softer shadow-lifted object-cover w-full max-h-[400px]"
+              />
+            </div>
+          </FadeIn>
+        </div>
+      </div>
 
       {/* The Approach */}
       <Section bg="alt">
@@ -170,10 +187,10 @@ export default function Coaching() {
             <FadeIn direction="left">
               <div className="photo-grain relative rounded-softer overflow-hidden">
                 <Image
-                  src="/images/retreat-group-meditation.jpg"
-                  alt="Group meditation at a Sedona leadership retreat"
-                  width={600}
-                  height={400}
+                  src="/images/retreat-64.jpg"
+                  alt="Outdoor yoga and stretching with Cathedral Rock, Sedona retreat"
+                  width={1200}
+                  height={800}
                   className="rounded-softer shadow-lifted object-cover w-full"
                 />
               </div>

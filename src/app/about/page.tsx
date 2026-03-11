@@ -79,10 +79,10 @@ export default function About() {
               <FadeIn direction="left">
                 <div className="photo-grain relative rounded-softer overflow-hidden">
                   <Image
-                    src="/images/jack-sedona-grounded.jpg"
-                    alt="Jack Rosenkrantz grounded in Sedona's landscape"
-                    width={800}
-                    height={533}
+                    src="/images/retreat-23.jpg"
+                    alt="Jack Rosenkrantz with hand on heart, eyes closed in Sedona"
+                    width={1200}
+                    height={800}
                     className="rounded-softer shadow-lifted object-cover"
                   />
                 </div>
@@ -125,10 +125,10 @@ export default function About() {
               <div className="my-10">
                 <div className="photo-cinematic relative rounded-softer overflow-hidden">
                   <Image
-                    src="/images/retreat-group-meditation.jpg"
-                    alt="Group meditation session at a Sedona retreat led by Jack"
-                    width={800}
-                    height={1200}
+                    src="/images/retreat-132.jpg"
+                    alt="Jack facilitating a retreat circle in Sedona"
+                    width={1200}
+                    height={800}
                     className="relative rounded-softer shadow-lifted object-cover w-full max-h-[500px]"
                   />
                 </div>

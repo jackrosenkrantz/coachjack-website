@@ -128,10 +128,10 @@ export default function Home() {
             <FadeIn direction="left">
               <div className="photo-grain relative rounded-softer overflow-hidden">
                 <Image
-                  src="/images/retreat-outdoor-conversation.jpg"
-                  alt="Coaching conversation in Sedona's red rock landscape"
-                  width={600}
-                  height={900}
+                  src="/images/retreat-250.jpg"
+                  alt="Jack Rosenkrantz in contemplation with Sedona red rocks"
+                  width={1200}
+                  height={800}
                   className="rounded-softer shadow-lifted object-cover max-h-[500px] w-full"
                 />
               </div>
