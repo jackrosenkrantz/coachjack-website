@@ -52,17 +52,21 @@ export default function Coaching() {
                 </p>
               </FadeIn>
             </div>
-            <div className="md:col-span-5 hidden md:block">
+            <div className="md:col-span-5">
               <FadeIn delay={200} direction="right">
                 <div className="photo-amber relative rounded-softer overflow-hidden">
-                  <Image
-                    src="/images/retreat-254.jpg"
-                    alt="Jack Rosenkrantz smiling in Sedona, Arizona"
-                    width={1200}
-                    height={800}
-                    className="rounded-softer shadow-lifted object-cover"
-                    priority
-                  />
+                  <picture>
+                    <source media="(max-width: 768px)" srcSet="/images/retreat-254-mobile.jpg" />
+                    <Image
+                      src="/images/retreat-254.jpg"
+                      alt="Jack Rosenkrantz smiling in Sedona, Arizona"
+                      width={1200}
+                      height={800}
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      className="rounded-softer shadow-lifted object-cover w-full"
+                      priority
+                    />
+                  </picture>
                 </div>
               </FadeIn>
             </div>
@@ -84,7 +88,10 @@ export default function Coaching() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {coaching.pattern.points.map((point, i) => (
             <FadeIn key={i} delay={i * 100}>
-              <div className="card-dark p-8">
+              <div className="card-accent p-8 md:p-10">
+                <div className="w-8 h-8 rounded-full bg-amber-light flex items-center justify-center mb-5">
+                  <span className="text-amber font-serif text-sm font-medium">{i + 1}</span>
+                </div>
                 <h3 className="font-serif text-xl text-deep mb-4">{point.title}</h3>
                 <p className="text-earth leading-relaxed text-sm">{point.body}</p>
               </div>
@@ -154,7 +161,10 @@ export default function Coaching() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {coaching.outcomes.items.map((outcome, i) => (
             <FadeIn key={i} delay={i * 80}>
-              <div className="card-dark p-8">
+              <div className="card-dark p-8 md:p-10">
+                <div className="w-10 h-10 rounded-full bg-amber-light flex items-center justify-center mb-5">
+                  <div className="w-2 h-2 rounded-full bg-amber" />
+                </div>
                 <h3 className="font-serif text-xl text-deep mb-3">{outcome.title}</h3>
                 <p className="text-earth leading-relaxed text-sm">{outcome.body}</p>
               </div>
@@ -167,36 +177,40 @@ export default function Coaching() {
       <div className="py-8 md:py-12">
         <div className="max-w-6xl mx-auto px-6">
           <FadeIn>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-              <div className="photo-amber relative rounded-softer overflow-hidden aspect-[4/3]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
+              <div className="photo-amber relative rounded-soft md:rounded-softer overflow-hidden aspect-square md:aspect-[4/3]">
                 <Image
                   src="/images/retreat-63.jpg"
                   alt="Outdoor group yoga class in Sedona"
                   fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover"
                 />
               </div>
-              <div className="photo-cinematic relative rounded-softer overflow-hidden aspect-[4/3]">
+              <div className="photo-cinematic relative rounded-soft md:rounded-softer overflow-hidden aspect-square md:aspect-[4/3]">
                 <Image
                   src="/images/retreat-16.jpg"
                   alt="Jack Rosenkrantz with confident, direct gaze in Sedona"
                   fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover"
                 />
               </div>
-              <div className="photo-grain relative rounded-softer overflow-hidden aspect-[4/3]">
+              <div className="photo-grain relative rounded-soft md:rounded-softer overflow-hidden aspect-square md:aspect-[4/3]">
                 <Image
                   src="/images/retreat-134.jpg"
                   alt="Close-up journaling detail at retreat"
                   fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover"
                 />
               </div>
-              <div className="photo-dark relative rounded-softer overflow-hidden aspect-[4/3]">
+              <div className="photo-dark relative rounded-soft md:rounded-softer overflow-hidden aspect-square md:aspect-[4/3]">
                 <Image
                   src="/images/retreat-148.jpg"
                   alt="Jack facilitating at whiteboard during retreat"
                   fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover"
                 />
               </div>
@@ -225,7 +239,7 @@ export default function Coaching() {
       {/* Retreats */}
       <Section id="retreats">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-          <div className="md:col-span-5 hidden md:block">
+          <div className="md:col-span-5 order-last md:order-first">
             <FadeIn direction="left">
               <div className="photo-grain relative rounded-softer overflow-hidden">
                 <Image
@@ -233,6 +247,7 @@ export default function Coaching() {
                   alt="Outdoor yoga and stretching with Cathedral Rock, Sedona retreat"
                   width={1200}
                   height={800}
+                  sizes="(max-width: 768px) 100vw, 40vw"
                   className="rounded-softer shadow-lifted object-cover w-full"
                 />
               </div>

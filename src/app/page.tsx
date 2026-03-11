@@ -41,17 +41,21 @@ export default function Home() {
                 </div>
               </FadeIn>
             </div>
-            <div className="md:col-span-5 hidden md:block">
+            <div className="md:col-span-5">
               <FadeIn delay={200} direction="right">
                 <div className="photo-cinematic relative rounded-softer overflow-hidden">
-                  <Image
-                    src="/images/jack-heart-sedona.jpg"
-                    alt="Jack Rosenkrantz - Executive Coach in Sedona, Arizona"
-                    width={800}
-                    height={533}
-                    className="relative rounded-softer shadow-lifted object-cover"
-                    priority
-                  />
+                  <picture>
+                    <source media="(max-width: 768px)" srcSet="/images/jack-heart-sedona-mobile.jpg" />
+                    <Image
+                      src="/images/jack-heart-sedona.jpg"
+                      alt="Jack Rosenkrantz - Executive Coach in Sedona, Arizona"
+                      width={800}
+                      height={533}
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      className="relative rounded-softer shadow-lifted object-cover w-full"
+                      priority
+                    />
+                  </picture>
                 </div>
               </FadeIn>
             </div>
@@ -108,28 +112,31 @@ export default function Home() {
       <div className="py-8 md:py-12">
         <div className="max-w-6xl mx-auto px-6">
           <FadeIn>
-            <div className="grid grid-cols-3 gap-3 md:gap-4">
-              <div className="photo-amber relative rounded-softer overflow-hidden aspect-[4/3]">
+            <div className="grid grid-cols-3 gap-2 md:gap-4">
+              <div className="photo-amber relative rounded-soft md:rounded-softer overflow-hidden aspect-[3/4] md:aspect-[4/3]">
                 <Image
                   src="/images/retreat-25.jpg"
                   alt="Jack playing guitar at a Sedona retreat"
                   fill
+                  sizes="33vw"
                   className="object-cover"
                 />
               </div>
-              <div className="photo-dark relative rounded-softer overflow-hidden aspect-[4/3]">
+              <div className="photo-dark relative rounded-soft md:rounded-softer overflow-hidden aspect-[3/4] md:aspect-[4/3]">
                 <Image
                   src="/images/retreat-32.jpg"
                   alt="Jack in warrior yoga pose with Sedona red rocks"
                   fill
+                  sizes="33vw"
                   className="object-cover"
                 />
               </div>
-              <div className="photo-cinematic relative rounded-softer overflow-hidden aspect-[4/3]">
+              <div className="photo-cinematic relative rounded-soft md:rounded-softer overflow-hidden aspect-[3/4] md:aspect-[4/3]">
                 <Image
                   src="/images/retreat-133.jpg"
                   alt="Retreat circle facilitation in Sedona"
                   fill
+                  sizes="33vw"
                   className="object-cover"
                 />
               </div>
@@ -158,7 +165,7 @@ export default function Home() {
       {/* Differentiation */}
       <Section bg="alt" wide>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-          <div className="md:col-span-5 hidden md:block">
+          <div className="md:col-span-5 order-last md:order-first">
             <FadeIn direction="left">
               <div className="photo-grain relative rounded-softer overflow-hidden">
                 <Image
@@ -166,6 +173,7 @@ export default function Home() {
                   alt="Jack Rosenkrantz in contemplation with Sedona red rocks"
                   width={1200}
                   height={800}
+                  sizes="(max-width: 768px) 100vw, 40vw"
                   className="rounded-softer shadow-lifted object-cover max-h-[500px] w-full"
                 />
               </div>

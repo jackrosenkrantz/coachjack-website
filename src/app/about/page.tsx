@@ -40,17 +40,21 @@ export default function About() {
                 </h1>
               </FadeIn>
             </div>
-            <div className="md:col-span-5 hidden md:block">
+            <div className="md:col-span-5">
               <FadeIn delay={200} direction="right">
                 <div className="photo-dark relative rounded-softer overflow-hidden">
-                  <Image
-                    src="/images/jack-headshot.jpg"
-                    alt="Jack Rosenkrantz - Executive Coach"
-                    width={500}
-                    height={750}
-                    className="relative rounded-softer shadow-lifted object-cover"
-                    priority
-                  />
+                  <picture>
+                    <source media="(max-width: 768px)" srcSet="/images/jack-headshot-mobile.jpg" />
+                    <Image
+                      src="/images/jack-headshot.jpg"
+                      alt="Jack Rosenkrantz - Executive Coach"
+                      width={500}
+                      height={750}
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      className="relative rounded-softer shadow-lifted object-cover w-full max-h-[400px] md:max-h-none"
+                      priority
+                    />
+                  </picture>
                 </div>
               </FadeIn>
             </div>
@@ -75,7 +79,7 @@ export default function About() {
       <Section bg="alt">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <div className="md:col-span-5 hidden md:block">
+            <div className="md:col-span-5 order-last md:order-first">
               <FadeIn direction="left">
                 <div className="photo-grain relative rounded-softer overflow-hidden">
                   <Image
@@ -83,7 +87,8 @@ export default function About() {
                     alt="Jack Rosenkrantz with hand on heart, eyes closed in Sedona"
                     width={1200}
                     height={800}
-                    className="rounded-softer shadow-lifted object-cover"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    className="rounded-softer shadow-lifted object-cover w-full"
                   />
                 </div>
               </FadeIn>
