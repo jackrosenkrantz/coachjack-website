@@ -177,6 +177,17 @@ export default function About() {
             <p className="italic text-warm-gray text-lg leading-relaxed">
               {about.credentials.personal}
             </p>
+            <div className="mt-8">
+              <div className="photo-amber relative rounded-softer overflow-hidden">
+                <Image
+                  src="/images/retreat-30.jpg"
+                  alt="Jack Rosenkrantz playing guitar and laughing in Sedona"
+                  width={1200}
+                  height={800}
+                  className="rounded-softer shadow-lifted object-cover w-full max-h-[400px]"
+                />
+              </div>
+            </div>
           </div>
         </FadeIn>
       </Section>

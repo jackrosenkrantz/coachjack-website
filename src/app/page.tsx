@@ -104,6 +104,40 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Photo strip — the range of the work */}
+      <div className="py-8 md:py-12">
+        <div className="max-w-6xl mx-auto px-6">
+          <FadeIn>
+            <div className="grid grid-cols-3 gap-3 md:gap-4">
+              <div className="photo-amber relative rounded-softer overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/images/retreat-25.jpg"
+                  alt="Jack playing guitar at a Sedona retreat"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="photo-dark relative rounded-softer overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/images/retreat-32.jpg"
+                  alt="Jack in warrior yoga pose with Sedona red rocks"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="photo-cinematic relative rounded-softer overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/images/retreat-133.jpg"
+                  alt="Retreat circle facilitation in Sedona"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </div>
+
       {/* Testimonials — Masonry grid */}
       <Section wide>
         <FadeIn>

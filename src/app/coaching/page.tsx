@@ -163,6 +163,48 @@ export default function Coaching() {
         </div>
       </Section>
 
+      {/* Retreat energy — photo grid */}
+      <div className="py-8 md:py-12">
+        <div className="max-w-6xl mx-auto px-6">
+          <FadeIn>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+              <div className="photo-amber relative rounded-softer overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/images/retreat-63.jpg"
+                  alt="Outdoor group yoga class in Sedona"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="photo-cinematic relative rounded-softer overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/images/retreat-16.jpg"
+                  alt="Jack Rosenkrantz with confident, direct gaze in Sedona"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="photo-grain relative rounded-softer overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/images/retreat-134.jpg"
+                  alt="Close-up journaling detail at retreat"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="photo-dark relative rounded-softer overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/images/retreat-148.jpg"
+                  alt="Jack facilitating at whiteboard during retreat"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </div>
+
       {/* Testimonials */}
       <Section bg="alt" wide>
         <FadeIn>
