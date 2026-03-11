@@ -1,25 +1,22 @@
 interface SectionProps {
   children: React.ReactNode;
   className?: string;
-  bg?: "cream" | "white" | "warm" | "sage" | "dark" | "sage-dark";
+  bg?: "default" | "alt" | "hero";
   id?: string;
   narrow?: boolean;
   wide?: boolean;
 }
 
 const bgClasses = {
-  cream: "bg-cream-100",
-  white: "bg-white",
-  warm: "bg-cream-200",
-  sage: "bg-sage-50",
-  dark: "section-dark",
-  "sage-dark": "section-sage",
+  default: "",
+  alt: "section-alt",
+  hero: "hero-gradient",
 };
 
 export default function Section({
   children,
   className = "",
-  bg = "cream",
+  bg = "default",
   id,
   narrow = false,
   wide = false,

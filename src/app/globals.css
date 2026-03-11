@@ -4,64 +4,17 @@
 
 @theme inline {
   /* ============================================
-     COLOR PALETTE - Earthy, grounded, warm
+     JACK OS DARK PALETTE
      ============================================ */
-
-  /* Cream - backgrounds */
-  --color-cream-50: #FDFCFA;
-  --color-cream-100: #FAF8F5;
-  --color-cream-200: #F5F1EB;
-  --color-cream-300: #EDE7DD;
-  --color-cream-400: #E5DCCE;
-  --color-cream-500: #D9CCBA;
-
-  /* Sage - accent, nature */
-  --color-sage-50: #F4F6F4;
-  --color-sage-100: #E8EBE8;
-  --color-sage-200: #D1D9D1;
-  --color-sage-300: #B5C2B5;
-  --color-sage-400: #94A794;
-  --color-sage-500: #768C76;
-  --color-sage-600: #5E7260;
-  --color-sage-700: #4A5A4C;
-  --color-sage-800: #3A473C;
-  --color-sage-900: #2D372F;
-
-  /* Terracotta - warm accent */
-  --color-terracotta-50: #FDF6F4;
-  --color-terracotta-100: #FAEBE6;
-  --color-terracotta-200: #F5D5CC;
-  --color-terracotta-300: #EDBBA8;
-  --color-terracotta-400: #E09A7D;
-  --color-terracotta-500: #C97B5D;
-  --color-terracotta-600: #B5624A;
-  --color-terracotta-700: #944F3D;
-  --color-terracotta-800: #763F32;
-  --color-terracotta-900: #5E332A;
-
-  /* Stone - mid-tones, borders, secondary text */
-  --color-stone-50: #F9F8F7;
-  --color-stone-100: #F1EFED;
-  --color-stone-200: #E3DFDA;
-  --color-stone-300: #D1CBC3;
-  --color-stone-400: #B9B0A5;
-  --color-stone-500: #9C9183;
-  --color-stone-600: #7F7568;
-  --color-stone-700: #655C52;
-  --color-stone-800: #4F4840;
-  --color-stone-900: #3D3833;
-
-  /* Charcoal - primary text, dark elements */
-  --color-charcoal-50: #F5F5F5;
-  --color-charcoal-100: #E8E8E8;
-  --color-charcoal-200: #D1D1D1;
-  --color-charcoal-300: #B0B0B0;
-  --color-charcoal-400: #888888;
-  --color-charcoal-500: #5C5C5C;
-  --color-charcoal-600: #444444;
-  --color-charcoal-700: #363636;
-  --color-charcoal-800: #282828;
-  --color-charcoal-900: #1A1A1A;
+  --color-sand: #1a1714;
+  --color-surface: #242019;
+  --color-stone: #3d352f;
+  --color-warm-gray: #7a726b;
+  --color-earth: #9a918a;
+  --color-deep: #e8e0d8;
+  --color-sage: #7a8b6f;
+  --color-amber: #c4956a;
+  --color-amber-light: #2e2418;
 
   /* ============================================
      TYPOGRAPHY
@@ -104,10 +57,9 @@
   /* ============================================
      SHADOWS
      ============================================ */
-  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.08);
-  --shadow-lifted: 0 8px 32px rgba(0, 0, 0, 0.1);
-  --shadow-glow: 0 0 40px rgba(94, 114, 96, 0.08);
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.25);
+  --shadow-lifted: 0 8px 32px rgba(0, 0, 0, 0.3);
 
   /* ============================================
      BORDER RADIUS
@@ -153,90 +105,65 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    color-scheme: dark;
   }
 
   body {
-    background-color: var(--color-cream-100);
-    color: var(--color-charcoal-700);
+    background-color: var(--color-sand);
+    color: var(--color-deep);
     font-family: var(--font-sans);
+    font-weight: 300;
     line-height: 1.7;
   }
 
   h1, h2, h3, h4 {
     font-family: var(--font-serif);
+    font-weight: 400;
     line-height: 1.3;
   }
 
   ::selection {
-    background-color: var(--color-sage-100);
-    color: var(--color-charcoal-800);
+    background-color: var(--color-amber-light);
+    color: var(--color-amber);
   }
 }
 
 @layer utilities {
-  .text-gradient {
-    background: linear-gradient(135deg, var(--color-sage-600), var(--color-sage-800));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
   .accent-line {
     width: 48px;
     height: 2px;
-    background: var(--color-sage-500);
+    background: var(--color-amber);
   }
 
   .accent-line-long {
     width: 80px;
     height: 2px;
-    background: linear-gradient(90deg, var(--color-sage-500), transparent);
+    background: linear-gradient(90deg, var(--color-amber), transparent);
   }
 
-  .card-elevated {
-    background: white;
-    border: 1px solid var(--color-stone-200);
+  .card-dark {
+    background: var(--color-surface);
+    border: 1px solid var(--color-stone);
     border-radius: var(--radius-softer);
-    box-shadow: var(--shadow-soft);
     transition: all 0.3s ease;
   }
 
-  .card-elevated:hover {
-    box-shadow: var(--shadow-medium);
-    border-color: var(--color-stone-300);
+  .card-dark:hover {
+    border-color: var(--color-amber);
     transform: translateY(-2px);
   }
 
-  .section-dark {
-    background: linear-gradient(135deg, var(--color-charcoal-800), var(--color-charcoal-900));
-    color: var(--color-stone-300);
-  }
-
-  .section-sage {
-    background: linear-gradient(135deg, var(--color-sage-800), var(--color-sage-900));
-    color: var(--color-sage-100);
+  .section-alt {
+    background: var(--color-surface);
   }
 
   .hero-gradient {
-    background: linear-gradient(180deg, var(--color-cream-100) 0%, var(--color-cream-200) 50%, var(--color-sage-50) 100%);
-  }
-
-  .bg-subtle-pattern {
-    background-image: radial-gradient(var(--color-stone-200) 1px, transparent 1px);
-    background-size: 24px 24px;
+    background: radial-gradient(ellipse at 50% 30%, rgba(196, 149, 106, 0.06) 0%, transparent 60%);
   }
 
   .quote-accent {
-    border-left: 3px solid var(--color-sage-500);
+    border-left: 3px solid var(--color-amber);
     padding-left: 1.5rem;
-  }
-
-  .number-accent {
-    font-family: var(--font-serif);
-    font-size: 3rem;
-    line-height: 1;
-    color: var(--color-sage-300);
-    font-weight: 400;
   }
 
   .tag {
@@ -245,9 +172,26 @@
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-sage-600);
-    border: 1px solid var(--color-sage-300);
+    color: var(--color-amber);
+    border: 1px solid var(--color-stone);
     padding: 0.25rem 0.75rem;
     border-radius: var(--radius-pill);
+  }
+
+  .photo-dark {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photo-dark img {
+    filter: brightness(0.8) saturate(0.7);
+  }
+
+  .photo-dark::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 23, 20, 0.15);
+    pointer-events: none;
   }
 }

@@ -15,18 +15,18 @@ export default function TestimonialCard({
       : testimonial.quote;
 
   return (
-    <div className="relative bg-white border border-stone-200 rounded-softer p-8 md:p-10 shadow-soft hover:shadow-medium transition-all duration-300">
+    <div className="relative card-dark p-8 md:p-10">
       {/* Quote mark accent */}
-      <div className="absolute top-6 left-8 text-sage-200 font-serif text-6xl leading-none select-none" aria-hidden="true">
+      <div className="absolute top-6 left-8 text-stone font-serif text-6xl leading-none select-none" aria-hidden="true">
         &ldquo;
       </div>
 
       <div className="relative pt-6">
-        <p className="text-stone-600 leading-relaxed italic text-sm md:text-base">
+        <p className="text-earth leading-relaxed italic text-sm md:text-base">
           {quote}
         </p>
 
-        <div className="mt-6 pt-6 border-t border-stone-100 flex items-center gap-4">
+        <div className="mt-6 pt-6 border-t border-stone flex items-center gap-4">
           {testimonial.image ? (
             <img
               src={testimonial.image}
@@ -34,16 +34,16 @@ export default function TestimonialCard({
               className="w-10 h-10 rounded-full object-cover"
             />
           ) : (
-            <div className="w-10 h-10 rounded-full bg-sage-100 flex items-center justify-center text-sage-600 font-medium text-sm">
+            <div className="w-10 h-10 rounded-full bg-amber-light flex items-center justify-center text-amber font-medium text-sm">
               {testimonial.name[0]}
             </div>
           )}
           <div>
-            <p className="text-charcoal-700 font-medium text-sm">
+            <p className="text-deep font-medium text-sm">
               {testimonial.name}
             </p>
             {(testimonial.title || testimonial.company) && (
-              <p className="text-stone-500 text-xs">
+              <p className="text-warm-gray text-xs">
                 {[testimonial.title, testimonial.company]
                   .filter(Boolean)
                   .join(", ")}

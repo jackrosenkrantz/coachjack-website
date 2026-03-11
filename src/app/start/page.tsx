@@ -1,3 +1,4 @@
+import Link from "next/link";
 import StartForm from "./StartForm";
 import { createServiceSchema } from "@/components/JsonLd";
 import JsonLd from "@/components/JsonLd";
@@ -13,50 +14,27 @@ export default function StartPage() {
         )}
       />
 
-      <div className="min-h-screen flex flex-col">
-        {/* Header */}
-        <header className="pt-8 pb-4 px-6 text-center">
-          <p
-            className="text-xs tracking-[0.2em] uppercase"
-            style={{ color: "#9a918a" }}
+      <div className="max-w-2xl mx-auto px-6 py-20 md:py-28">
+        <div className="text-center mb-12">
+          <span className="tag mb-6 inline-block">Start Here</span>
+          <h1 className="font-serif text-4xl md:text-5xl text-deep mb-6" style={{ lineHeight: 1.15 }}>
+            See How You Actually Operate
+          </h1>
+          <p className="text-lg md:text-xl text-earth max-w-lg mx-auto" style={{ lineHeight: 1.6 }}>
+            Tell us what you&apos;re navigating. We&apos;ll connect you with the right path&mdash;whether that&apos;s The Portal, a conversation with Jack, or both.
+          </p>
+        </div>
+
+        <StartForm />
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/"
+            className="text-warm-gray hover:text-earth transition-colors text-sm"
           >
-            THE PORTAL
-          </p>
-        </header>
-
-        {/* Hero */}
-        <section className="flex-1 flex items-center justify-center px-6 pb-12">
-          <div className="max-w-2xl mx-auto w-full">
-            <div className="text-center mb-12">
-              <h1
-                className="font-serif text-4xl md:text-5xl lg:text-display-sm font-normal mb-6"
-                style={{ color: "#e8e0d8", lineHeight: 1.15 }}
-              >
-                See How You Actually Operate
-              </h1>
-              <p
-                className="text-lg md:text-xl max-w-lg mx-auto"
-                style={{ color: "#9a918a", lineHeight: 1.6 }}
-              >
-                Most leaders optimize without ever seeing the system they're
-                optimizing. This changes that.
-              </p>
-            </div>
-
-            <StartForm />
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer
-          className="py-6 px-6 text-center text-xs"
-          style={{ color: "#7a726b", borderTop: "1px solid #3d352f" }}
-        >
-          <p>
-            &copy; {new Date().getFullYear()} Jack Rosenkrantz &middot;
-            coachjack.xyz
-          </p>
-        </footer>
+            &larr; Back to site
+          </Link>
+        </div>
       </div>
     </>
   );

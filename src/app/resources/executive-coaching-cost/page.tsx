@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Section from "@/components/Section";
+import Button from "@/components/Button";
 import FadeIn from "@/components/FadeIn";
 import JsonLd, { createArticleSchema, createFaqSchema } from "@/components/JsonLd";
 import { siteContent } from "@/lib/site-content";
@@ -58,18 +59,17 @@ export default function ExecutiveCoachingCost() {
 
       {/* Hero */}
       <section className="hero-gradient min-h-[50vh] flex items-center relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, var(--color-sage-500) 0%, transparent 50%)' }} />
         <div className="max-w-4xl mx-auto px-6 py-24 md:py-32 relative">
           <FadeIn delay={0}>
             <span className="tag mb-8 inline-block">Resource Guide</span>
           </FadeIn>
           <FadeIn delay={100}>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-charcoal-700 leading-[1.1] mb-6 tracking-tight">
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-deep leading-[1.1] mb-6 tracking-tight">
               {siteContent.resources.executiveCoachingCost.hero.headline}
             </h1>
           </FadeIn>
           <FadeIn delay={200}>
-            <p className="text-lg md:text-xl text-stone-500 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-earth max-w-2xl leading-relaxed">
               {siteContent.resources.executiveCoachingCost.hero.subheadline}
             </p>
           </FadeIn>
@@ -77,16 +77,16 @@ export default function ExecutiveCoachingCost() {
       </section>
 
       {/* Content */}
-      <Section bg="white">
+      <Section>
         <FadeIn>
-          <article className="max-w-3xl space-y-8 text-stone-600 leading-relaxed text-lg">
+          <article className="max-w-3xl space-y-8 text-earth leading-relaxed text-lg">
             <p>
               If you&apos;re exploring executive coaching, one of the first questions is: what does it cost? The honest answer is that it varies&mdash;significantly. This guide breaks down what drives pricing, what to expect, and how to think about the investment.
             </p>
 
             <div className="accent-line my-12" />
 
-            <h2 className="font-serif text-2xl md:text-3xl text-charcoal-700 pt-4">
+            <h2 className="font-serif text-2xl md:text-3xl text-deep pt-4">
               National averages for executive coaching
             </h2>
             <p>
@@ -99,11 +99,9 @@ export default function ExecutiveCoachingCost() {
                 { label: "Premium/specialized coaches:", text: "$500\u2013$1,000+ per hour" },
                 { label: "Monthly retainers:", text: "$2,000\u2013$10,000+ per month" },
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <span className="w-6 h-6 rounded-full bg-sage-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-sage-500" />
-                  </span>
-                  <span><strong>{item.label}</strong> {item.text}</span>
+                <li key={i} className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber mt-2 flex-shrink-0" />
+                  <span><strong className="text-deep">{item.label}</strong> {item.text}</span>
                 </li>
               ))}
             </ul>
@@ -111,7 +109,7 @@ export default function ExecutiveCoachingCost() {
               These ranges reflect the diversity of the coaching market&mdash;from newer coaches building their practice to seasoned professionals working with Fortune 500 executives.
             </p>
 
-            <h2 className="font-serif text-2xl md:text-3xl text-charcoal-700 pt-4">
+            <h2 className="font-serif text-2xl md:text-3xl text-deep pt-4">
               Factors that affect executive coaching pricing
             </h2>
             <p>
@@ -125,16 +123,14 @@ export default function ExecutiveCoachingCost() {
                 { label: "Engagement structure:", text: "Package-based engagements often offer better value than per-session pricing" },
                 { label: "What\u2019s included:", text: "Some engagements include only sessions; others include assessments, async support, somatic practices, and integration work" },
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <span className="w-6 h-6 rounded-full bg-sage-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-sage-500" />
-                  </span>
-                  <span><strong>{item.label}</strong> {item.text}</span>
+                <li key={i} className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber mt-2 flex-shrink-0" />
+                  <span><strong className="text-deep">{item.label}</strong> {item.text}</span>
                 </li>
               ))}
             </ul>
 
-            <h2 className="font-serif text-2xl md:text-3xl text-charcoal-700 pt-4">
+            <h2 className="font-serif text-2xl md:text-3xl text-deep pt-4">
               Common pricing models
             </h2>
             <p>
@@ -146,16 +142,14 @@ export default function ExecutiveCoachingCost() {
                 { label: "Monthly retainer:", text: "A fixed monthly investment that covers sessions, async support, and other elements. Creates a more integrated coaching relationship. Typical range: $2,000\u2013$5,000/month." },
                 { label: "Package/engagement:", text: "A fixed investment for a defined period (e.g., 6 months). Often the best value, as it builds in the commitment and continuity that deep coaching requires. Typical range: $10,000\u2013$30,000+ for a full engagement." },
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <span className="w-6 h-6 rounded-full bg-sage-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-sage-500" />
-                  </span>
-                  <span><strong>{item.label}</strong> {item.text}</span>
+                <li key={i} className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber mt-2 flex-shrink-0" />
+                  <span><strong className="text-deep">{item.label}</strong> {item.text}</span>
                 </li>
               ))}
             </ul>
 
-            <h2 className="font-serif text-2xl md:text-3xl text-charcoal-700 pt-4">
+            <h2 className="font-serif text-2xl md:text-3xl text-deep pt-4">
               What&apos;s typically included
             </h2>
             <p>
@@ -169,16 +163,14 @@ export default function ExecutiveCoachingCost() {
                 "Tailored practices or exercises between sessions",
                 "Integration and closing review at the end of the engagement",
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <span className="w-6 h-6 rounded-full bg-sage-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-sage-500" />
-                  </span>
+                <li key={i} className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber mt-2 flex-shrink-0" />
                   {item}
                 </li>
               ))}
             </ul>
 
-            <h2 className="font-serif text-2xl md:text-3xl text-charcoal-700 pt-4">
+            <h2 className="font-serif text-2xl md:text-3xl text-deep pt-4">
               What to expect in the Phoenix/Arizona market
             </h2>
             <p>
@@ -188,7 +180,7 @@ export default function ExecutiveCoachingCost() {
               The market includes coaches with a wide range of approaches&mdash;from traditional performance coaching to more integrated methods that address the whole person. Some Phoenix-based coaches specialize in working with the tech startup community, while others focus on established corporate leaders.
             </p>
 
-            <h2 className="font-serif text-2xl md:text-3xl text-charcoal-700 pt-4">
+            <h2 className="font-serif text-2xl md:text-3xl text-deep pt-4">
               How to evaluate ROI
             </h2>
             <p>
@@ -200,7 +192,7 @@ export default function ExecutiveCoachingCost() {
 
             <div className="accent-line my-12" />
 
-            <h2 className="font-serif text-2xl md:text-3xl text-charcoal-700 pt-4">
+            <h2 className="font-serif text-2xl md:text-3xl text-deep pt-4">
               Jack&apos;s approach to pricing
             </h2>
             <p>
@@ -217,21 +209,21 @@ export default function ExecutiveCoachingCost() {
       </Section>
 
       {/* FAQ */}
-      <Section bg="cream">
+      <Section bg="alt">
         <FadeIn>
           <div className="accent-line mb-6" />
-          <h2 className="font-serif text-3xl md:text-4xl text-charcoal-700 mb-10">
+          <h2 className="font-serif text-3xl md:text-4xl text-deep mb-10">
             Frequently asked questions
           </h2>
         </FadeIn>
-        <div className="max-w-3xl space-y-8">
+        <div className="max-w-3xl space-y-6">
           {faqItems.map((item, i) => (
             <FadeIn key={i} delay={i * 80}>
-              <div className="quote-accent">
-                <h3 className="font-serif text-lg text-charcoal-700 mb-3">
+              <div className="card-dark p-6 md:p-8">
+                <h3 className="font-serif text-lg text-deep mb-3">
                   {item.question}
                 </h3>
-                <p className="text-stone-600 leading-relaxed">{item.answer}</p>
+                <p className="text-earth leading-relaxed text-sm">{item.answer}</p>
               </div>
             </FadeIn>
           ))}
@@ -239,43 +231,38 @@ export default function ExecutiveCoachingCost() {
       </Section>
 
       {/* CTA */}
-      <section className="section-sage py-20 md:py-28">
+      <section className="py-20 md:py-28 border-t border-stone">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <FadeIn>
-            <p className="text-sage-300 text-sm uppercase tracking-widest font-medium mb-6">Next step</p>
-            <h2 className="font-serif text-3xl md:text-4xl text-cream-100 mb-4">
+            <p className="text-warm-gray text-sm uppercase tracking-widest font-medium mb-6">Next step</p>
+            <h2 className="font-serif text-3xl md:text-4xl text-deep mb-4">
               Ready to explore coaching?
             </h2>
-            <p className="text-sage-200 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+            <p className="text-earth text-lg leading-relaxed mb-10 max-w-xl mx-auto">
               The best way to understand what coaching costs&mdash;and what it&apos;s worth&mdash;is to have a real conversation about what you&apos;re navigating.
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-10 py-4 bg-cream-100 text-charcoal-700 text-sm font-medium tracking-wide rounded-soft hover:bg-white transition-colors shadow-medium"
-            >
-              Book a Call
-            </Link>
+            <Button href="/start">Start Here</Button>
           </FadeIn>
         </div>
       </section>
 
       {/* Internal Links */}
-      <Section bg="cream">
+      <Section bg="alt">
         <FadeIn>
           <div className="max-w-3xl">
-            <p className="text-stone-500 text-sm uppercase tracking-widest font-medium mb-6">
+            <p className="text-warm-gray text-sm uppercase tracking-widest font-medium mb-6">
               Continue exploring
             </p>
             <div className="flex flex-wrap gap-4">
               {[
-                { href: "/executive-coaching", label: "Executive Coaching with Jack" },
+                { href: "/coaching", label: "Coaching with Jack" },
                 { href: "/resources/what-is-executive-coaching", label: "What Is Executive Coaching?" },
                 { href: "/about", label: "About Jack" },
               ].map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="group inline-flex items-center gap-2 text-sage-600 hover:text-sage-700 font-medium transition-colors"
+                  className="group inline-flex items-center gap-2 text-amber hover:text-deep font-medium transition-colors"
                 >
                   {link.label}
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="transition-transform group-hover:translate-x-1">

@@ -21,14 +21,21 @@ export default function Nav() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-cream-100/95 backdrop-blur-md border-b border-stone-200/60 shadow-soft"
-          : "bg-cream-100/80 backdrop-blur-sm border-b border-transparent"
+          ? "border-b border-stone/60 shadow-soft"
+          : "border-b border-transparent"
       }`}
+      style={{
+        background: scrolled
+          ? "rgba(26, 23, 20, 0.95)"
+          : "rgba(26, 23, 20, 0.80)",
+        backdropFilter: scrolled ? "blur(12px)" : "blur(8px)",
+        WebkitBackdropFilter: scrolled ? "blur(12px)" : "blur(8px)",
+      }}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link
           href="/"
-          className="font-serif text-xl text-charcoal-700 hover:text-sage-600 transition-colors"
+          className="font-serif text-xl text-deep hover:text-amber transition-colors"
         >
           {siteContent.siteName}
         </Link>
@@ -39,14 +46,14 @@ export default function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[13px] text-stone-600 hover:text-charcoal-700 transition-colors whitespace-nowrap"
+              className="text-[13px] text-earth hover:text-deep transition-colors whitespace-nowrap"
             >
               {link.label}
             </Link>
           ))}
           <Link
             href={cta.href}
-            className="inline-flex items-center justify-center px-5 py-2 bg-charcoal-700 text-cream-100 text-[13px] font-medium tracking-wide rounded-soft hover:bg-charcoal-600 transition-all shadow-soft hover:shadow-medium ml-2"
+            className="inline-flex items-center justify-center px-5 py-2 bg-amber text-sand text-[13px] font-medium tracking-wide rounded-soft hover:opacity-85 transition-all ml-2"
           >
             {cta.label}
           </Link>
@@ -55,7 +62,7 @@ export default function Nav() {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden p-2 text-stone-600 hover:text-charcoal-700 transition-colors"
+          className="lg:hidden p-2 text-earth hover:text-deep transition-colors"
           aria-label="Toggle menu"
         >
           {open ? (
@@ -72,23 +79,30 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden border-t border-stone-200/50 bg-cream-100/98 backdrop-blur-md">
+        <div
+          className="lg:hidden border-t border-stone/50"
+          style={{
+            background: "rgba(26, 23, 20, 0.98)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+          }}
+        >
           <div className="px-6 py-6 flex flex-col gap-4">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-stone-600 hover:text-charcoal-700 transition-colors py-1"
+                className="text-earth hover:text-deep transition-colors py-1"
               >
                 {link.label}
               </Link>
             ))}
-            <div className="pt-4 border-t border-stone-200/50">
+            <div className="pt-4 border-t border-stone/50">
               <Link
                 href={cta.href}
                 onClick={() => setOpen(false)}
-                className="inline-flex items-center justify-center w-full px-6 py-3 bg-charcoal-700 text-cream-100 text-sm font-medium tracking-wide rounded-soft hover:bg-charcoal-600 transition-colors"
+                className="inline-flex items-center justify-center w-full px-6 py-3 bg-amber text-sand text-sm font-medium tracking-wide rounded-soft hover:opacity-85 transition-colors"
               >
                 {cta.label}
               </Link>

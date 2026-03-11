@@ -31,7 +31,7 @@ export const localBusinessSchema = {
   description:
     "Executive coaching for founders and leaders in Phoenix, Scottsdale, and across Arizona. Blending nervous system work, yoga philosophy, and transformational facilitation.",
   url: "https://coachjack.xyz",
-  email: "jack@becomingthebridge.co",
+  email: "jack@coachjack.xyz",
   founder: {
     "@type": "Person",
     name: "Jack Rosenkrantz",
@@ -62,7 +62,7 @@ export const organizationSchema = {
   name: "Jack Rosenkrantz Executive Coaching",
   url: "https://coachjack.xyz",
   logo: "https://coachjack.xyz/images/jack-hero.jpg",
-  email: "jack@becomingthebridge.co",
+  email: "jack@coachjack.xyz",
   founder: {
     "@type": "Person",
     name: "Jack Rosenkrantz",
@@ -79,7 +79,7 @@ export const personSchema = {
   name: "Jack Rosenkrantz",
   jobTitle: "Executive Coach",
   url: "https://coachjack.xyz",
-  email: "jack@becomingthebridge.co",
+  email: "jack@coachjack.xyz",
   sameAs: ["https://www.linkedin.com/in/jackrosenkrantz/"],
   worksFor: {
     "@type": "Organization",

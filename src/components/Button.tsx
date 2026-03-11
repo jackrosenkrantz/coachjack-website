@@ -20,9 +20,9 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-charcoal-700 text-cream-100 hover:bg-charcoal-600 active:bg-charcoal-500 shadow-soft hover:shadow-medium",
+      "bg-amber text-sand hover:opacity-85",
     secondary:
-      "border border-stone-400 text-stone-700 hover:border-stone-600 hover:text-charcoal-700 active:bg-cream-200",
+      "border border-amber text-amber hover:bg-amber-light",
   };
 
   const classes = `${base} ${variants[variant]} ${className}`;
