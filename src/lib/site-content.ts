@@ -366,7 +366,7 @@ export const siteContent = {
       { href: "/coaching", label: "Coaching" },
       { href: "/about", label: "About" },
       { href: "/contact", label: "Contact" },
-      { href: "/resources/what-is-executive-coaching", label: "Resources" },
+      { href: "/resources", label: "Resources" },
     ],
     resourceLinks: [
       {
