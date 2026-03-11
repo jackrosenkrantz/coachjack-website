@@ -20,7 +20,7 @@ export default function Home() {
       <section className="hero-gradient min-h-[90vh] flex items-center relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <div className="md:col-span-7">
+            <div className="md:col-span-7 order-1">
               <FadeIn delay={0}>
                 <span className="tag mb-8 inline-block">Executive Coach &middot; Phoenix, AZ</span>
               </FadeIn>
@@ -30,18 +30,12 @@ export default function Home() {
                 </h1>
               </FadeIn>
               <FadeIn delay={200}>
-                <p className="text-lg md:text-xl text-earth max-w-xl mb-12 leading-relaxed">
+                <p className="text-lg md:text-xl text-earth max-w-xl mb-0 md:mb-12 leading-relaxed">
                   {home.hero.subheadline}
                 </p>
               </FadeIn>
-              <FadeIn delay={300}>
-                <div className="flex flex-wrap gap-4 items-center">
-                  <Button href={home.hero.cta.href}>{home.hero.cta.label}</Button>
-                  <Button href="/about" variant="secondary">Learn My Story</Button>
-                </div>
-              </FadeIn>
             </div>
-            <div className="md:col-span-5">
+            <div className="md:col-span-5 order-2 md:order-3">
               <FadeIn delay={200} direction="right">
                 <div className="photo-cinematic relative rounded-softer overflow-hidden">
                   <picture>
@@ -56,6 +50,14 @@ export default function Home() {
                       priority
                     />
                   </picture>
+                </div>
+              </FadeIn>
+            </div>
+            <div className="md:col-span-7 order-3 md:order-2">
+              <FadeIn delay={300}>
+                <div className="flex flex-wrap gap-4 items-center">
+                  <Button href={home.hero.cta.href}>{home.hero.cta.label}</Button>
+                  <Button href="/about" variant="secondary">Learn My Story</Button>
                 </div>
               </FadeIn>
             </div>
