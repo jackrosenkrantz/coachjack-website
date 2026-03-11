@@ -9,13 +9,27 @@ import JsonLd, {
   createServiceSchema,
   createFaqSchema,
   createBreadcrumbSchema,
+  createArticleSchema,
 } from "@/components/JsonLd";
+import { industries, getIndustry } from "@/lib/content/industries";
 import { locations, getLocation } from "@/lib/content/locations";
-import { industries } from "@/lib/content/industries";
 import { resources } from "@/lib/content/resources";
+import type { ContentPage } from "@/lib/content/types";
+import type { LocationPage } from "@/lib/content/types";
 
 export function generateStaticParams() {
-  return locations.map((l) => ({ slug: l.slug }));
+  return [
+    ...industries.map((i) => ({ slug: i.slug })),
+    ...locations.map((l) => ({ slug: l.slug })),
+  ];
+}
+
+function findPage(slug: string): { page: ContentPage; type: "industry" | "location" } | null {
+  const industry = getIndustry(slug);
+  if (industry) return { page: industry, type: "industry" };
+  const location = getLocation(slug);
+  if (location) return { page: location, type: "location" };
+  return null;
 }
 
 export async function generateMetadata({
@@ -24,24 +38,28 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const page = getLocation(slug);
-  if (!page) return {};
+  const result = findPage(slug);
+  if (!result) return {};
+  const { page } = result;
 
   return {
     title: page.meta.title,
     description: page.meta.description,
-    alternates: { canonical: `/coaching/in-${page.slug}` },
+    alternates: { canonical: `/coaching/${page.slug}` },
     openGraph: {
       title: page.meta.title,
       description: page.meta.description,
-      url: `https://coachjack.xyz/coaching/in-${page.slug}`,
+      url: `https://coachjack.xyz/coaching/${page.slug}`,
     },
   };
 }
 
 function resolveRelatedLink(s: string): { href: string; label: string } | null {
   const industry = industries.find((i) => i.slug === s);
-  if (industry) return { href: `/coaching/for-${s}`, label: industry.hero.headline };
+  if (industry) return { href: `/coaching/${s}`, label: industry.hero.headline };
+
+  const location = locations.find((l) => l.slug === s);
+  if (location) return { href: `/coaching/${s}`, label: location.hero.headline };
 
   const resource = resources.find((r) => r.slug === s);
   if (resource) return { href: `/resources/${s}`, label: resource.hero.headline };
@@ -49,27 +67,19 @@ function resolveRelatedLink(s: string): { href: string; label: string } | null {
   return null;
 }
 
-export default async function LocationPage({
+export default async function CoachingSubPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const page = getLocation(slug);
-  if (!page) notFound();
+  const result = findPage(slug);
+  if (!result) notFound();
+  const { page, type } = result;
 
   const base = "https://coachjack.xyz";
-
-  const locationBusiness = {
-    ...localBusinessSchema,
-    areaServed: [
-      { "@type": "City", name: `${page.city}, ${page.state}` },
-      ...page.nearbyAreas.map((area) => ({
-        "@type": "City",
-        name: `${area}, ${page.state}`,
-      })),
-    ],
-  };
+  const isLocation = type === "location";
+  const locationPage = isLocation ? (page as LocationPage) : null;
 
   const relatedLinks = [
     { href: "/coaching", label: "Coaching with Jack" },
@@ -80,12 +90,26 @@ export default async function LocationPage({
 
   return (
     <>
-      <JsonLd data={locationBusiness} />
+      {/* JSON-LD */}
+      {isLocation && locationPage && (
+        <JsonLd
+          data={{
+            ...localBusinessSchema,
+            areaServed: [
+              { "@type": "City", name: `${locationPage.city}, ${locationPage.state}` },
+              ...locationPage.nearbyAreas.map((area) => ({
+                "@type": "City",
+                name: `${area}, ${locationPage.state}`,
+              })),
+            ],
+          }}
+        />
+      )}
       <JsonLd
         data={createServiceSchema(
-          `Executive Coaching in ${page.city}`,
+          page.hero.headline,
           page.meta.description,
-          `${base}/coaching/in-${page.slug}`,
+          `${base}/coaching/${page.slug}`,
         )}
       />
       <JsonLd data={createFaqSchema(page.faqs)} />
@@ -93,10 +117,7 @@ export default async function LocationPage({
         data={createBreadcrumbSchema([
           { name: "Home", url: base },
           { name: "Coaching", url: `${base}/coaching` },
-          {
-            name: `${page.city}, ${page.state}`,
-            url: `${base}/coaching/in-${page.slug}`,
-          },
+          { name: page.hero.headline, url: `${base}/coaching/${page.slug}` },
         ])}
       />
 
@@ -119,14 +140,16 @@ export default async function LocationPage({
         </div>
       </section>
 
-      {/* Area Description */}
-      <Section>
-        <FadeIn>
-          <p className="text-earth text-lg leading-relaxed max-w-3xl italic">
-            {page.areaDescription}
-          </p>
-        </FadeIn>
-      </Section>
+      {/* Area Description (location pages only) */}
+      {isLocation && locationPage && (
+        <Section>
+          <FadeIn>
+            <p className="text-earth text-lg leading-relaxed max-w-3xl italic">
+              {locationPage.areaDescription}
+            </p>
+          </FadeIn>
+        </Section>
+      )}
 
       {/* Content */}
       <Section>
@@ -159,22 +182,22 @@ export default async function LocationPage({
         </FadeIn>
       </Section>
 
-      {/* Nearby Areas */}
-      {page.nearbyAreas.length > 0 && (
+      {/* Nearby Areas (location pages only) */}
+      {isLocation && locationPage && locationPage.nearbyAreas.length > 0 && (
         <Section bg="alt">
           <FadeIn>
             <p className="text-warm-gray text-sm uppercase tracking-widest font-medium mb-4">
               Also serving
             </p>
             <p className="text-earth text-lg">
-              {page.nearbyAreas.join(" · ")}
+              {locationPage.nearbyAreas.join(" · ")}
             </p>
           </FadeIn>
         </Section>
       )}
 
       {/* FAQ */}
-      <Section bg={page.nearbyAreas.length > 0 ? "default" : "alt"}>
+      <Section bg={isLocation && locationPage && locationPage.nearbyAreas.length > 0 ? "default" : "alt"}>
         <FadeIn>
           <div className="accent-line mb-6" />
           <h2 className="font-serif text-3xl md:text-4xl text-deep mb-10">

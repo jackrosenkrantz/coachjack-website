@@ -2,7 +2,7 @@ import type { ContentPage } from "./types"
 
 export const industries: ContentPage[] = [
   {
-    slug: "founders",
+    slug: "for-founders",
     meta: {
       title: "Executive Coaching for Founders | Jack Rosenkrantz",
       description: "Coaching for founders navigating the isolation of building. From startup identity to scaling leadership, this work meets you where advice and strategy cannot.",
@@ -67,13 +67,13 @@ export const industries: ContentPage[] = [
       body: "The company will only grow as much as you do. Let us talk about the work that comes next.",
     },
     relatedSlugs: [
-      "ceos",
+      "for-ceos",
       "what-is-executive-coaching",
       "nervous-system-coaching-for-leaders",
     ],
   },
   {
-    slug: "ceos",
+    slug: "for-ceos",
     meta: {
       title: "Executive Coaching for CEOs | Jack Rosenkrantz",
       description: "CEO coaching for the challenges no one else sees. Board dynamics, loneliness at the top, legacy building, and the personal cost of leading at the highest level.",
@@ -138,13 +138,13 @@ export const industries: ContentPage[] = [
       body: "A conversation with no agenda other than your growth. That is rare. It is also exactly what this role demands.",
     },
     relatedSlugs: [
-      "founders",
+      "for-founders",
       "executive-coaching-roi",
       "what-to-expect-from-executive-coaching",
     ],
   },
   {
-    slug: "executives-in-transition",
+    slug: "for-executives-in-transition",
     meta: {
       title: "Coaching for Executives in Transition | Jack Rosenkrantz",
       description: "Executive coaching for career transitions: new roles, layoffs, promotions, and the identity work that determines whether you thrive or just survive the change.",
@@ -209,13 +209,13 @@ export const industries: ContentPage[] = [
       body: "Transitions reveal what has always been true about your leadership. The question is whether you look at it or look away.",
     },
     relatedSlugs: [
-      "high-performers",
+      "for-high-performers",
       "what-to-expect-from-executive-coaching",
       "how-to-choose-an-executive-coach",
     ],
   },
   {
-    slug: "high-performers",
+    slug: "for-high-performers",
     meta: {
       title: "Coaching for High Performers | Jack Rosenkrantz",
       description: "You have the success, the title, the track record. And something still feels off. Executive coaching for leaders who have achieved everything except fulfillment.",
@@ -280,13 +280,13 @@ export const industries: ContentPage[] = [
       body: "Transformation is subtraction. Sometimes the next level is not about adding more. It is about becoming less.",
     },
     relatedSlugs: [
-      "executives-in-transition",
+      "for-executives-in-transition",
       "nervous-system-coaching-for-leaders",
       "executive-coaching-vs-therapy",
     ],
   },
   {
-    slug: "leadership-coaching",
+    slug: "for-leadership-coaching",
     meta: {
       title: "Leadership Coaching in Phoenix, Arizona | Jack Rosenkrantz",
       description: "Leadership coaching that goes beyond tactics and frameworks. Develop the presence, self-awareness, and resilience that transform how you lead teams and organizations.",
@@ -357,7 +357,7 @@ export const industries: ContentPage[] = [
       body: "Not better tools. A deeper way of being. That is what changes everything.",
     },
     relatedSlugs: [
-      "founders",
+      "for-founders",
       "what-is-executive-coaching",
       "executive-coaching-roi",
     ],

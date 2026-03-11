@@ -42,7 +42,7 @@ function resolveRelatedLink(s: string): { href: string; label: string } | null {
   if (resource) return { href: `/resources/${s}`, label: resource.hero.headline };
 
   const industry = industries.find((i) => i.slug === s);
-  if (industry) return { href: `/coaching/for-${s}`, label: industry.hero.headline };
+  if (industry) return { href: `/coaching/${s}`, label: industry.hero.headline };
 
   return null;
 }

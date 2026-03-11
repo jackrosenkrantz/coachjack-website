@@ -2,7 +2,7 @@ import type { LocationPage } from "./types"
 
 export const locations: LocationPage[] = [
   {
-    slug: "phoenix",
+    slug: "in-phoenix",
     city: "Phoenix",
     state: "Arizona",
     areaDescription: "Phoenix is the economic engine of the Southwest. Fortune 500 headquarters, a growing tech corridor, and a business culture that moves fast without the pretension of coastal cities.",
@@ -77,7 +77,7 @@ export const locations: LocationPage[] = [
     ],
   },
   {
-    slug: "scottsdale",
+    slug: "in-scottsdale",
     city: "Scottsdale",
     state: "Arizona",
     areaDescription: "Scottsdale attracts a particular kind of leader. Successful, often post-exit, looking for what comes after achievement. The wealth is visible. The restlessness underneath it is not.",
@@ -153,7 +153,7 @@ export const locations: LocationPage[] = [
     ],
   },
   {
-    slug: "sedona",
+    slug: "in-sedona",
     city: "Sedona",
     state: "Arizona",
     areaDescription: "Sedona is where executives come when they need more than a meeting room. The red rocks, the silence, the scale of the landscape. It changes what becomes possible in a coaching conversation.",
@@ -234,7 +234,7 @@ export const locations: LocationPage[] = [
     ],
   },
   {
-    slug: "tucson",
+    slug: "in-tucson",
     city: "Tucson",
     state: "Arizona",
     areaDescription: "Tucson is its own city with its own identity. University of Arizona anchors the economy alongside aerospace, defense, and a growing bioscience corridor. The leadership culture here is less corporate, more mission-driven.",

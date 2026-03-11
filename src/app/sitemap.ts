@@ -51,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Niche/industry pages
     ...industries.map((i) => ({
-      url: `${base}/coaching/for-${i.slug}`,
+      url: `${base}/coaching/${i.slug}`,
       lastModified: new Date(i.dateModified),
       changeFrequency: "monthly" as const,
       priority: 0.7,
@@ -59,7 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Location pages
     ...locations.map((l) => ({
-      url: `${base}/coaching/in-${l.slug}`,
+      url: `${base}/coaching/${l.slug}`,
       lastModified: new Date(l.dateModified),
       changeFrequency: "monthly" as const,
       priority: 0.6,
