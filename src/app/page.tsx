@@ -20,7 +20,7 @@ export default function Home() {
       <section className="hero-gradient min-h-[90vh] flex items-center relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <div className="md:col-span-7">
+            <div className="md:col-span-6">
               <FadeIn delay={0}>
                 <span className="tag mb-8 inline-block">Executive Coach &middot; Phoenix, AZ</span>
               </FadeIn>
@@ -41,7 +41,7 @@ export default function Home() {
                 </div>
               </FadeIn>
             </div>
-            <div className="md:col-span-5">
+            <div className="md:col-span-6">
               <FadeIn delay={200} direction="right">
                 <div className="photo-cinematic relative rounded-softer overflow-hidden">
                   <picture>
@@ -51,7 +51,7 @@ export default function Home() {
                       alt="Jack Rosenkrantz - Executive Coach in Sedona, Arizona"
                       width={800}
                       height={533}
-                      sizes="(max-width: 768px) 100vw, 40vw"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="relative rounded-softer shadow-lifted object-cover w-full"
                       priority
                     />
