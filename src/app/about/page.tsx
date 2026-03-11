@@ -28,7 +28,7 @@ export default function About() {
 
       {/* Hero */}
       <section className="hero-gradient relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 pt-24 md:pt-32 pb-12 relative">
+        <div className="max-w-6xl mx-auto px-6 pt-24 md:pt-32 pb-4 relative">
           <FadeIn delay={0}>
             <span className="tag mb-8 inline-block">About Jack</span>
           </FadeIn>
@@ -38,9 +38,9 @@ export default function About() {
             </h1>
           </FadeIn>
         </div>
-        <div className="max-w-6xl mx-auto px-6 pb-16 md:pb-24">
+        <div className="max-w-6xl mx-auto px-6 pb-8 md:pb-16">
           <FadeIn delay={200}>
-            <div className="photo-cinematic relative rounded-softer overflow-hidden w-[60%] md:w-[35%]">
+            <div className="photo-cinematic relative rounded-softer overflow-hidden w-[60%] md:w-[35%] ml-12 md:ml-24">
               <Image
                 src="/images/jack-sedona-smiling.jpg"
                 alt="Jack Rosenkrantz smiling in Sedona, Arizona"
