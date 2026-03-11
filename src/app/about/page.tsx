@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
+import TestimonialCard from "@/components/TestimonialCard";
 import FadeIn from "@/components/FadeIn";
 import JsonLd, { personSchema } from "@/components/JsonLd";
+import { getTestimonialsForContext } from "@/lib/testimonials";
 import { siteContent } from "@/lib/site-content";
 
 const about = siteContent.about;
@@ -75,10 +77,10 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-5 hidden md:block">
               <FadeIn direction="left">
-                <div className="photo-dark relative rounded-softer overflow-hidden">
+                <div className="photo-grain relative rounded-softer overflow-hidden">
                   <Image
-                    src="/images/jack-heart.jpg"
-                    alt="Jack Rosenkrantz in meditation, Sedona Arizona"
+                    src="/images/jack-sedona-grounded.jpg"
+                    alt="Jack Rosenkrantz grounded in Sedona's landscape"
                     width={800}
                     height={533}
                     className="rounded-softer shadow-lifted object-cover"
@@ -121,7 +123,7 @@ export default function About() {
                 ))}
               </div>
               <div className="my-10">
-                <div className="photo-dark relative rounded-softer overflow-hidden">
+                <div className="photo-cinematic relative rounded-softer overflow-hidden">
                   <Image
                     src="/images/retreat-group-meditation.jpg"
                     alt="Group meditation session at a Sedona retreat led by Jack"
@@ -177,6 +179,23 @@ export default function About() {
             </p>
           </div>
         </FadeIn>
+      </Section>
+
+      {/* Testimonials */}
+      <Section wide>
+        <FadeIn>
+          <div className="text-center mb-12">
+            <div className="accent-line mx-auto mb-6" />
+            <p className="text-warm-gray text-sm uppercase tracking-widest font-medium">What people say</p>
+          </div>
+        </FadeIn>
+        <div className="testimonial-grid">
+          {getTestimonialsForContext("about").map((t, i) => (
+            <FadeIn key={t.id} delay={i * 80}>
+              <TestimonialCard testimonial={t} compact />
+            </FadeIn>
+          ))}
+        </div>
       </Section>
 
       {/* CTA */}

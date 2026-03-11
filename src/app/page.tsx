@@ -5,7 +5,7 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import FadeIn from "@/components/FadeIn";
 import JsonLd, { localBusinessSchema, personSchema } from "@/components/JsonLd";
-import { getFeaturedTestimonials } from "@/lib/testimonials";
+import { getTestimonialsForContext } from "@/lib/testimonials";
 import { siteContent } from "@/lib/site-content";
 
 const home = siteContent.home;
@@ -16,7 +16,7 @@ export default function Home() {
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={personSchema} />
 
-      {/* Hero */}
+      {/* Hero — Pain-first headline */}
       <section className="hero-gradient min-h-[90vh] flex items-center relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
@@ -26,9 +26,7 @@ export default function Home() {
               </FadeIn>
               <FadeIn delay={100}>
                 <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-deep leading-[1.1] mb-8 tracking-tight">
-                  Leadership is who you are,
-                  <br />
-                  <span className="text-amber">not what you do.</span>
+                  {home.hero.headline}
                 </h1>
               </FadeIn>
               <FadeIn delay={200}>
@@ -45,7 +43,7 @@ export default function Home() {
             </div>
             <div className="md:col-span-5 hidden md:block">
               <FadeIn delay={200} direction="right">
-                <div className="photo-dark relative rounded-softer overflow-hidden">
+                <div className="photo-cinematic relative rounded-softer overflow-hidden">
                   <Image
                     src="/images/jack-sedona-standing.jpg"
                     alt="Jack Rosenkrantz - Executive Coach in Sedona, Arizona"
@@ -60,6 +58,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Social Proof Strip */}
+      <div className="proof-strip py-6">
+        <div className="max-w-6xl mx-auto px-6">
+          <FadeIn>
+            <p className="text-warm-gray text-xs uppercase tracking-widest font-medium mb-4">
+              {home.proofStrip.label}
+            </p>
+            <div className="flex flex-wrap gap-x-10 gap-y-3">
+              {getTestimonialsForContext("homepage")
+                .filter((t) => t.company)
+                .map((t) => (
+                  <span key={t.id} className="proof-strip-item text-earth text-sm">
+                    {t.company}
+                  </span>
+                ))}
+            </div>
+          </FadeIn>
+        </div>
+      </div>
 
       {/* Philosophy */}
       <Section>
@@ -82,25 +100,8 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Social Proof */}
-      <Section bg="alt">
-        <FadeIn>
-          <div className="text-center mb-12">
-            <div className="accent-line mx-auto mb-6" />
-            <p className="text-warm-gray text-sm uppercase tracking-widest font-medium">What clients say</p>
-          </div>
-        </FadeIn>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {getFeaturedTestimonials().map((t, i) => (
-            <FadeIn key={t.id} delay={i * 100}>
-              <TestimonialCard testimonial={t} compact />
-            </FadeIn>
-          ))}
-        </div>
-      </Section>
-
       {/* What I Do */}
-      <Section wide>
+      <Section wide bg="alt">
         <FadeIn>
           <div className="text-center mb-14">
             <div className="accent-line mx-auto mb-6" />
@@ -123,15 +124,32 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Testimonials — Masonry grid */}
+      <Section wide>
+        <FadeIn>
+          <div className="text-center mb-12">
+            <div className="accent-line mx-auto mb-6" />
+            <p className="text-warm-gray text-sm uppercase tracking-widest font-medium">What clients say</p>
+          </div>
+        </FadeIn>
+        <div className="testimonial-grid">
+          {getTestimonialsForContext("homepage").map((t, i) => (
+            <FadeIn key={t.id} delay={i * 80}>
+              <TestimonialCard testimonial={t} compact />
+            </FadeIn>
+          ))}
+        </div>
+      </Section>
+
       {/* Differentiation */}
-      <Section bg="alt">
+      <Section bg="alt" wide>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5 hidden md:block">
             <FadeIn direction="left">
-              <div className="photo-dark relative rounded-softer overflow-hidden">
+              <div className="photo-grain relative rounded-softer overflow-hidden">
                 <Image
-                  src="/images/retreat-writing-sepia.jpg"
-                  alt="Reflective writing exercise at a Sedona leadership retreat"
+                  src="/images/retreat-outdoor-conversation.jpg"
+                  alt="Coaching conversation in Sedona's red rock landscape"
                   width={600}
                   height={900}
                   className="rounded-softer shadow-lifted object-cover max-h-[500px] w-full"
@@ -165,12 +183,12 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <FadeIn>
             <h2 className="font-serif text-3xl md:text-4xl text-deep mb-6">
-              The path to yourself begins here.
+              {home.cta.text}
             </h2>
             <p className="text-earth text-lg leading-relaxed mb-10 max-w-xl mx-auto">
               Whether you&apos;re exploring coaching or want to start with The Portal&mdash;the first step is the same.
             </p>
-            <Button href="/start">Begin</Button>
+            <Button href={home.cta.href}>{home.cta.label}</Button>
           </FadeIn>
         </div>
       </section>

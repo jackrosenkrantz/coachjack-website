@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
+import TestimonialCard from "@/components/TestimonialCard";
 import FadeIn from "@/components/FadeIn";
 import JsonLd, { createServiceSchema, createFaqSchema } from "@/components/JsonLd";
+import { getTestimonialsForContext } from "@/lib/testimonials";
 import { siteContent } from "@/lib/site-content";
 
 const coaching = siteContent.coaching;
@@ -32,114 +35,167 @@ export default function Coaching() {
 
       {/* Hero */}
       <section className="hero-gradient min-h-[60vh] flex items-center relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-6 py-24 md:py-32 relative">
-          <FadeIn delay={0}>
-            <span className="tag mb-8 inline-block">Coaching</span>
-          </FadeIn>
-          <FadeIn delay={100}>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-deep leading-[1.1] mb-6 tracking-tight">
-              {coaching.hero.headline}
-            </h1>
-          </FadeIn>
-          <FadeIn delay={200}>
-            <p className="text-lg md:text-xl text-earth max-w-2xl leading-relaxed">
-              {coaching.hero.subheadline}
-            </p>
-          </FadeIn>
+        <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-7">
+              <FadeIn delay={0}>
+                <span className="tag mb-8 inline-block">Coaching</span>
+              </FadeIn>
+              <FadeIn delay={100}>
+                <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-deep leading-[1.1] mb-6 tracking-tight">
+                  {coaching.hero.headline}
+                </h1>
+              </FadeIn>
+              <FadeIn delay={200}>
+                <p className="text-lg md:text-xl text-earth max-w-2xl leading-relaxed">
+                  {coaching.hero.subheadline}
+                </p>
+              </FadeIn>
+            </div>
+            <div className="md:col-span-5 hidden md:block">
+              <FadeIn delay={200} direction="right">
+                <div className="photo-amber relative rounded-softer overflow-hidden">
+                  <Image
+                    src="/images/jack-chair.jpg"
+                    alt="Jack Rosenkrantz in a coaching session"
+                    width={500}
+                    height={750}
+                    className="rounded-softer shadow-lifted object-cover"
+                    priority
+                  />
+                </div>
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Executive Coaching */}
+      {/* The Pattern — Agitation */}
       <Section id="executive-coaching">
         <FadeIn>
           <div className="accent-line mb-6" />
-          <h2 className="font-serif text-3xl md:text-4xl text-deep mb-6">
-            {coaching.executiveCoaching.headline}
+          <h2 className="font-serif text-3xl md:text-4xl text-deep mb-4">
+            {coaching.pattern.headline}
           </h2>
-        </FadeIn>
-        <FadeIn delay={100}>
-          <p className="text-amber text-lg font-medium mb-6 font-serif italic">
-            {coaching.executiveCoaching.intro}
+          <p className="text-amber text-lg font-medium mb-10 font-serif italic">
+            {coaching.pattern.intro}
           </p>
-          <div className="space-y-6 text-earth leading-relaxed text-lg mb-10">
-            {coaching.executiveCoaching.body.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
         </FadeIn>
-
-        <FadeIn delay={200}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-            <div>
-              <h3 className="font-serif text-xl text-deep mb-4">The approach</h3>
-              <ul className="space-y-3">
-                {coaching.executiveCoaching.approach.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-earth text-sm">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber mt-2 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-serif text-xl text-deep mb-4">What clients experience</h3>
-              <ul className="space-y-3">
-                {coaching.executiveCoaching.outcomes.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-earth text-sm">
-                    <span className="w-1.5 h-1.5 rounded-full bg-sage mt-2 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </FadeIn>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {coaching.pattern.points.map((point, i) => (
+            <FadeIn key={i} delay={i * 100}>
+              <div className="card-dark p-8">
+                <h3 className="font-serif text-xl text-deep mb-4">{point.title}</h3>
+                <p className="text-earth leading-relaxed text-sm">{point.body}</p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
       </Section>
 
-      {/* Coaching for Founders */}
-      <Section bg="alt" id="founders">
-        <FadeIn>
-          <div className="accent-line mb-6" />
-          <h2 className="font-serif text-3xl md:text-4xl text-deep mb-6">
-            {coaching.founders.headline}
-          </h2>
-        </FadeIn>
-        <FadeIn delay={100}>
-          <p className="text-amber text-lg font-medium mb-6 font-serif italic">
-            {coaching.founders.intro}
-          </p>
-          <div className="space-y-6 text-earth leading-relaxed text-lg mb-10">
-            {coaching.founders.body.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+      {/* The Approach */}
+      <Section bg="alt">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+          <div className="md:col-span-5">
+            <FadeIn>
+              <div className="accent-line mb-6" />
+              <h2 className="font-serif text-3xl md:text-4xl text-deep mb-4">
+                {coaching.approach.headline}
+              </h2>
+              <p className="text-amber text-lg font-medium font-serif italic">
+                {coaching.approach.intro}
+              </p>
+            </FadeIn>
           </div>
-          <ul className="space-y-3">
-            {coaching.founders.items.map((item, i) => (
-              <li key={i} className="flex items-start gap-3 text-earth">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber mt-2 flex-shrink-0" />
-                {item}
-              </li>
-            ))}
-          </ul>
+          <div className="md:col-span-7">
+            <FadeIn delay={100}>
+              <ul className="space-y-4">
+                {coaching.approach.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-4 text-earth">
+                    <span className="w-6 h-6 rounded-full bg-amber-light flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber" />
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </FadeIn>
+          </div>
+        </div>
+      </Section>
+
+      {/* Outcomes */}
+      <Section wide>
+        <FadeIn>
+          <div className="text-center mb-12">
+            <div className="accent-line mx-auto mb-6" />
+            <h2 className="font-serif text-3xl md:text-4xl text-deep">
+              {coaching.outcomes.headline}
+            </h2>
+          </div>
         </FadeIn>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {coaching.outcomes.items.map((outcome, i) => (
+            <FadeIn key={i} delay={i * 80}>
+              <div className="card-dark p-8">
+                <h3 className="font-serif text-xl text-deep mb-3">{outcome.title}</h3>
+                <p className="text-earth leading-relaxed text-sm">{outcome.body}</p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </Section>
+
+      {/* Testimonials */}
+      <Section bg="alt" wide>
+        <FadeIn>
+          <div className="text-center mb-12">
+            <div className="accent-line mx-auto mb-6" />
+            <p className="text-warm-gray text-sm uppercase tracking-widest font-medium">What clients say</p>
+          </div>
+        </FadeIn>
+        <div className="testimonial-grid">
+          {getTestimonialsForContext("coaching").map((t, i) => (
+            <FadeIn key={t.id} delay={i * 80}>
+              <TestimonialCard testimonial={t} compact />
+            </FadeIn>
+          ))}
+        </div>
       </Section>
 
       {/* Retreats */}
       <Section id="retreats">
-        <FadeIn>
-          <div className="accent-line mb-6" />
-          <h2 className="font-serif text-3xl md:text-4xl text-deep mb-6">
-            {coaching.retreats.headline}
-          </h2>
-        </FadeIn>
-        <FadeIn delay={100}>
-          <p className="text-earth leading-relaxed text-lg mb-8">
-            {coaching.retreats.body}
-          </p>
-          <Button href={coaching.retreats.cta.href} variant="secondary" external>
-            {coaching.retreats.cta.label}
-          </Button>
-        </FadeIn>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-5 hidden md:block">
+            <FadeIn direction="left">
+              <div className="photo-grain relative rounded-softer overflow-hidden">
+                <Image
+                  src="/images/retreat-group-meditation.jpg"
+                  alt="Group meditation at a Sedona leadership retreat"
+                  width={600}
+                  height={400}
+                  className="rounded-softer shadow-lifted object-cover w-full"
+                />
+              </div>
+            </FadeIn>
+          </div>
+          <div className="md:col-span-7">
+            <FadeIn>
+              <div className="accent-line mb-6" />
+              <h2 className="font-serif text-3xl md:text-4xl text-deep mb-6">
+                {coaching.retreats.headline}
+              </h2>
+            </FadeIn>
+            <FadeIn delay={100}>
+              <p className="text-earth leading-relaxed text-lg mb-8">
+                {coaching.retreats.body}
+              </p>
+              <Button href={coaching.retreats.cta.href} variant="secondary" external>
+                {coaching.retreats.cta.label}
+              </Button>
+            </FadeIn>
+          </div>
+        </div>
       </Section>
 
       {/* Investment */}
@@ -156,14 +212,14 @@ export default function Coaching() {
       </Section>
 
       {/* FAQ */}
-      <Section id="faq">
+      <Section id="faq" wide>
         <FadeIn>
           <div className="accent-line mb-6" />
           <h2 className="font-serif text-2xl md:text-3xl text-deep mb-10">
             {coaching.faq.headline}
           </h2>
         </FadeIn>
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {coaching.faq.items.map((item, i) => (
             <FadeIn key={i} delay={i * 50}>
               <div className="card-dark p-6 md:p-8">
