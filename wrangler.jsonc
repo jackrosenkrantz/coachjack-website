@@ -6,5 +6,8 @@
     "binding": "ASSETS"
   },
   "compatibility_date": "2025-01-01",
-  "compatibility_flags": ["nodejs_compat"]
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "PORTAL_APP_URL": "https://portal-app-production-3816.up.railway.app"
+  }
 }
