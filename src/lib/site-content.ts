@@ -1,11 +1,13 @@
 // site-content.ts - All copy content for coachjack.xyz
-// Radical redesign: 4 core pages + SEO content, dark theme, universal /start CTA
+// Voice: Jack's LinkedIn posts — poetic, philosophical, occasionally profane.
+// Structure: Problem-Agitation-Solution. Every headline passes "would a CEO stop scrolling?" test.
 
 export const siteContent = {
   // ============================================
   // GLOBAL
   // ============================================
   siteName: "Jack Rosenkrantz",
+  siteUrl: "https://coachjack.xyz",
   siteTagline: "Executive Coach | Phoenix & Scottsdale, Arizona",
   email: "jack@coachjack.xyz",
   calendlyUrl: "https://calendly.com/jackrosenkrantz/30min?back=1&month=2026-03",
@@ -27,100 +29,126 @@ export const siteContent = {
   },
 
   // ============================================
-  // HOMEPAGE — Single-scroll conversion page
+  // HOMEPAGE — Pain-first, conversion-focused
   // ============================================
   home: {
     hero: {
-      headline: "Leadership is who you are, not what you do.",
+      headline: "You built the thing. Why does it feel like this?",
       subheadline:
-        "Executive coaching for founders and leaders who are ready to stop performing and start leading. Phoenix, Scottsdale, and nationwide.",
+        "Executive coaching for founders and leaders who are done performing and ready to lead from the inside out. Phoenix, Scottsdale, and nationwide.",
       cta: {
-        label: "Begin",
+        label: "Start a Conversation",
         href: "/start",
       },
     },
 
+    proofStrip: {
+      label: "Trusted by founders and executives at",
+    },
+
     philosophy: {
-      headline: "Better humans make better leaders.",
-      body: "I work with founders and executives who are done with surface-level fixes. My approach blends executive coaching with nervous system regulation and transformational facilitation\u2014because sustainable leadership starts from the inside out.",
+      headline: "Transformation is subtraction, not addition.",
+      body: "You don\u2019t need another framework. Another productivity system. Another version of yourself to perform. The leaders who change the world are the ones who stop performing leadership and start practicing presence\u2014who lead from alignment, not expectation. That\u2019s the work.",
     },
 
     services: [
       {
         title: "1:1 Coaching",
         description:
-          "Deep, ongoing work with founders and C-suite leaders. Blending leadership strategy with nervous system work, somatic practices, and radical honesty.",
+          "Deep, ongoing work with founders and C-suite leaders. Not cheerleading. Not tactics. The real work\u2014nervous system, shadow, and the patterns running beneath your decisions.",
         cta: { label: "Learn More", href: "/coaching" },
       },
       {
         title: "The Portal",
         description:
-          "A structured AI journey that helps you see your patterns, design better systems, and operate sustainably. Four phases. Real transformation. $20/mo.",
-        cta: { label: "Start Free", href: "/start" },
+          "A structured AI journey that surfaces the patterns running your leadership, your decisions, and your life. Four phases. Real transformation. $20/mo.",
+        cta: { label: "Enter The Portal", href: "/start" },
       },
     ],
 
     differentiator: {
-      headline: "Why this work is different",
+      headline: "This is not advice. This is the real work.",
       body: [
         "Most coaching stops at tactics and frameworks. I go deeper\u2014into the nervous system, the patterns running beneath your decisions, the gap between who you perform as and who you actually are.",
-        "I blend a decade of sales leadership experience with somatic practices, AI fluency, and the kind of honest reflection most people avoid. Not because it\u2019s trendy. Because it\u2019s what actually works.",
+        "A decade of sales leadership. 500+ hours of yoga teacher training. Somatic practices. AI fluency. And the kind of honest reflection most people avoid. Not because it\u2019s trendy. Because it\u2019s what actually works.",
       ],
+    },
+
+    cta: {
+      text: "Ready to stop performing and start leading?",
+      label: "Start a Conversation",
+      href: "/start",
     },
   },
 
   // ============================================
-  // COACHING PAGE — Unified services
+  // COACHING PAGE — Problem-first, outcome-specific
   // ============================================
   coaching: {
     hero: {
-      headline: "Coaching that meets you where you are",
+      headline: "You\u2019ve achieved everything they told you to want.",
       subheadline:
-        "Executive coaching, founder coaching, and immersive retreats. In-person in Phoenix and Scottsdale, or remote anywhere.",
+        "And something still isn\u2019t right. Executive coaching for founders and leaders ready to lead from alignment, not expectation.",
     },
 
-    executiveCoaching: {
-      headline: "Executive Coaching",
+    pattern: {
+      headline: "The pattern nobody talks about.",
+      intro:
+        "You\u2019re not broken. You\u2019re running a program that used to work\u2014and it doesn\u2019t anymore.",
+      points: [
+        {
+          title: "The performance trap",
+          body: "You\u2019ve optimized everything except the thing that matters most. The team sees confidence. You feel compression. Another quarter of performing a version of yourself that used to fit.",
+        },
+        {
+          title: "The isolation",
+          body: "Nobody\u2019s coaching the human doing the scaling. The one who hasn\u2019t slept well in months. Who can\u2019t turn off the problem-solving brain. Who built a team but still feels completely alone in the room.",
+        },
+        {
+          title: "The hollow win",
+          body: "You hit the number. Got the title. Built the thing from nothing. And now you\u2019re asking the question you never expected: is this it?",
+        },
+      ],
+    },
+
+    approach: {
+      headline: "The work.",
       intro:
         "This isn\u2019t coaching for people who want a cheerleader. This is for leaders ready to meet themselves\u2014nervous system, shadow, and all.",
-      body: [
-        "Most executive coaching is about performance. More productivity. Better delegation. Sharper communication. Those things matter\u2014but they\u2019re not the root.",
-        "The leaders I work with are done with surface-level fixes. They want to understand why they react under pressure, why success still feels hollow, why the team reflects back the tension they carry in their own body.",
-      ],
-      approach: [
+      items: [
         "Leadership presence\u2014not charisma, but the capacity to hold space under pressure",
         "Decision-making from clarity, not reactivity",
         "Navigating transitions\u2014promotions, exits, pivots\u2014without losing yourself",
         "Team dynamics that start with your own nervous system",
         "Burnout recovery and sustainable high performance",
       ],
-      outcomes: [
-        "Greater presence and composure in high-stakes situations",
-        "Clearer decision-making without the anxiety spiral",
-        "Stronger relationships with direct reports and leadership teams",
-        "A leadership style that feels authentic, not performed",
-      ],
     },
 
-    founders: {
-      headline: "Coaching for Founders",
-      intro:
-        "You built something from nothing. Now it\u2019s building you\u2014and not always in the direction you wanted.",
-      body: [
-        "Nobody\u2019s coaching the human doing the scaling. The one who hasn\u2019t slept well in months. Who can\u2019t turn off the problem-solving brain. Who built a team but still feels completely alone in the room.",
-        "I work with founders who are ready for coaching that matches the depth of what they\u2019re building.",
-      ],
+    outcomes: {
+      headline: "What changes.",
       items: [
-        "Founder loneliness\u2014having a partner in the fire who isn\u2019t on your payroll",
-        "Scaling identity\u2014growing as fast as your company without losing yourself",
-        "Team culture from the inside out\u2014your regulation sets the tone for the entire org",
-        "Decision-making from clarity, not anxiety",
+        {
+          title: "Composure under fire",
+          body: "Greater presence in high-stakes moments. The board room, the hard conversation, the decision that keeps you up at night\u2014you meet it differently.",
+        },
+        {
+          title: "Decisions from clarity",
+          body: "Your choices stop coming from anxiety and start coming from alignment. The spiral quiets. The path gets clearer.",
+        },
+        {
+          title: "Authentic leadership",
+          body: "A leadership style that feels like yours, not performed. Your team feels the shift before you even name it.",
+        },
+        {
+          title: "Sustainable performance",
+          body: "High performance that doesn\u2019t cost you your health, your relationships, or your sense of self. Building from alignment, not burnout.",
+        },
       ],
     },
 
     retreats: {
       headline: "Sedona Retreats",
-      body: "Immersive coaching experiences in Sedona\u2019s red rock landscape\u2014coaching, yoga, breathwork, and nature woven into 1\u20133 day intensive formats. Solo or small group. For group retreat experiences, visit Becoming the Bridge, co-founded with Chelsea Linge.",
+      body: "Immersive coaching experiences in Sedona\u2019s red rock landscape\u2014coaching, yoga, breathwork, and nature woven into intensive formats. You don\u2019t become fireproof by standing at the edge of the fire. For group retreat experiences, visit Becoming the Bridge.",
       cta: {
         label: "Visit Becoming the Bridge",
         href: "https://www.becomingthebridge.co",
@@ -128,7 +156,7 @@ export const siteContent = {
     },
 
     faq: {
-      headline: "Frequently asked questions",
+      headline: "Questions worth asking",
       items: [
         {
           question: "How is this different from therapy?",
@@ -148,7 +176,7 @@ export const siteContent = {
         {
           question: "What does the investment look like?",
           answer:
-            "Investment varies based on the engagement length and format. Most coaching engagements are structured as monthly retainers. Reach out for a conversation about what makes sense for your situation.",
+            "Investment varies based on the engagement length and format. Most coaching engagements are structured as monthly retainers. This work requires commitment\u2014from both of us. Reach out for a conversation about what makes sense for your situation.",
         },
         {
           question: "What is The Portal?",
@@ -170,17 +198,17 @@ export const siteContent = {
 
     cta: {
       text: "Ready to lead differently?",
-      label: "Start Here",
+      label: "Start a Conversation",
       href: "/start",
     },
   },
 
   // ============================================
-  // ABOUT PAGE
+  // ABOUT PAGE — Wound / Awakening / Work
   // ============================================
   about: {
     hero: {
-      headline: "The path to yourself begins here.",
+      headline: "I coach leaders back to themselves.",
     },
 
     wound: {
@@ -199,10 +227,10 @@ export const siteContent = {
     },
 
     work: {
-      headline: "The work",
+      headline: "The work now",
       body: [
         "Now I hold space for others walking this path\u2014from my home base in Arizona, serving clients across Phoenix, Scottsdale, Sedona, and nationwide.",
-        "As an executive coach, I work with founders and leaders who have achieved success but feel the cost. Who are ready to lead from presence, not performance. Who want their work to be a vehicle for becoming, not a machine that grinds them down.",
+        "I work with founders and leaders who have achieved success but feel the cost. Who are ready to lead from presence, not performance. Who want their work to be a vehicle for becoming, not a machine that grinds them down.",
       ],
       approachLabel: "My approach draws from:",
       bullets: [
@@ -212,7 +240,8 @@ export const siteContent = {
         "Somatic and nervous system practices",
         "The wisdom traditions that remind us who we already are",
       ],
-      closing: "I don\u2019t coach people to optimize. I coach them to come home.",
+      closing:
+        "I don\u2019t coach people to optimize. I coach them to come home.",
     },
 
     credentials: {
@@ -220,7 +249,7 @@ export const siteContent = {
       items: [
         "Co-founder, Becoming the Bridge (with Chelsea Linge)",
         "Former VP of Sales, Nivati",
-        "Certified Yoga Teacher",
+        "Certified Yoga Teacher (500+ hours)",
         "Executive Coach",
         "Based in Phoenix, Arizona",
       ],
@@ -230,17 +259,17 @@ export const siteContent = {
 
     cta: {
       text: "Ready to have a real conversation?",
-      label: "Start Here",
+      label: "Start a Conversation",
       href: "/start",
     },
   },
 
   // ============================================
-  // CONTACT PAGE — Minimal NAP, no form
+  // CONTACT PAGE — Minimal, direct
   // ============================================
   contact: {
     hero: {
-      headline: "Get in touch",
+      headline: "Let\u2019s talk.",
       body: "The best way to start is through the intake form. If you prefer email, reach out directly.",
     },
 
@@ -281,41 +310,44 @@ export const siteContent = {
   },
 
   // ============================================
-  // SEO META
+  // SEO META — 150-160 chars, keyword-first
   // ============================================
   meta: {
     home: {
-      title: "Executive Coach Phoenix & Scottsdale, Arizona | Jack Rosenkrantz",
+      title:
+        "Executive Coach Phoenix & Scottsdale, Arizona | Jack Rosenkrantz",
       description:
-        "Executive coaching for founders and leaders in Phoenix, Scottsdale, and across Arizona. Blending nervous system work, yoga philosophy, and transformational facilitation.",
+        "Executive coaching for founders who built the company but lost themselves in the process. Transformation through presence, not performance. Phoenix & nationwide.",
     },
     coaching: {
-      title: "Executive Coaching & Coaching for Founders | Jack Rosenkrantz",
+      title:
+        "Executive Coaching for Founders & Leaders | Jack Rosenkrantz",
       description:
-        "Executive coaching for C-suite leaders, founders, and entrepreneurs. In-person in Phoenix and Scottsdale, or remote nationwide. Integrating leadership strategy with nervous system work.",
+        "Executive coaching that goes deeper than tactics. Nervous system work, radical honesty, and the patterns beneath your decisions. Phoenix, Scottsdale & remote.",
     },
     about: {
-      title: "About Jack Rosenkrantz | Executive Coach in Phoenix, Arizona",
+      title:
+        "About Jack Rosenkrantz | Executive Coach in Phoenix, Arizona",
       description:
-        "From sales leadership to sobriety to embodied coaching. Jack Rosenkrantz is an executive coach based in Phoenix, Arizona, serving leaders across Scottsdale, Sedona, and nationwide.",
+        "From sales leadership to sobriety to embodied coaching. Jack Rosenkrantz coaches founders and executives back to themselves. Phoenix, Arizona & nationwide.",
     },
     contact: {
       title:
         "Contact | Jack Rosenkrantz, Executive Coach in Phoenix, AZ",
       description:
-        "Get in touch about executive coaching, founder coaching, or Sedona retreats. Jack Rosenkrantz, executive coach based in Phoenix, Arizona.",
+        "Start a conversation about executive coaching, founder coaching, or Sedona retreats. Jack Rosenkrantz, executive coach based in Phoenix, Arizona.",
     },
     whatIsExecutiveCoaching: {
       title:
         "What Is Executive Coaching? A Complete Guide | Jack Rosenkrantz",
       description:
-        "Learn what executive coaching is, who hires an executive coach, what a typical engagement looks like, and how to choose the right coach. Executive coaching guide from Phoenix, Arizona.",
+        "Learn what executive coaching is, who hires an executive coach, and how to choose the right one. A practical guide from an executive coach in Phoenix, Arizona.",
     },
     executiveCoachingCost: {
       title:
         "Executive Coaching Cost: What to Expect in 2026 | Jack Rosenkrantz",
       description:
-        "How much does executive coaching cost? National averages, pricing models, what\u2019s included, and what to expect in the Phoenix/Arizona market. Transparent pricing guide.",
+        "How much does executive coaching cost? National averages, pricing models, and what to expect. A transparent guide from a Phoenix-based executive coach.",
     },
   },
 
@@ -324,7 +356,7 @@ export const siteContent = {
   // ============================================
   footer: {
     tagline:
-      "Executive coaching for founders and leaders in Phoenix, Scottsdale, Sedona, and across Arizona.",
+      "Executive coaching for founders and leaders who are done performing and ready to lead from the inside out.",
     serviceArea:
       "Serving Phoenix, Scottsdale, Sedona & remote clients nationwide",
     nap: {
@@ -364,5 +396,3 @@ export const siteContent = {
     copyright: "\u00a9 2026 Jack Rosenkrantz",
   },
 };
-
-export default siteContent;
