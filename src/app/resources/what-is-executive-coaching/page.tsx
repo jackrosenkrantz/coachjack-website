@@ -41,7 +41,7 @@ const faqItems = [
   {
     question: "What\u2019s the ROI of executive coaching?",
     answer:
-      "Studies consistently show significant ROI from executive coaching. The ICF reports that 86% of companies that invested in coaching saw a positive return. Benefits include better decision-making, stronger leadership presence, improved team performance, and reduced burnout\u2014outcomes that compound over time.",
+      "Studies consistently show significant ROI from executive coaching. Benefits include better decision-making, stronger leadership presence, improved team performance, and reduced burnout\u2014outcomes that compound over time.",
   },
 ];
 
@@ -151,13 +151,13 @@ export default function WhatIsExecutiveCoaching() {
               How to choose the right executive coach
             </h2>
             <p>
-              Choosing a coach is a deeply personal decision. Credentials matter, but chemistry matters more. Look for someone whose approach resonates with how you learn and grow. Ask about their methodology. Have a real conversation before committing.
+              Choosing a coach is a deeply personal decision. Chemistry matters most. Look for someone whose approach resonates with how you learn and grow. Ask about their methodology. Have a real conversation before committing.
             </p>
             <p>Key things to consider:</p>
             <ul className="space-y-4">
               {[
                 "Do they have experience with leaders at your level and in your context?",
-                "What\u2019s their coaching philosophy\u2014not just their credentials, but how they actually work?",
+                "What\u2019s their coaching philosophy\u2014how do they actually work?",
                 "Can they meet you where you are, or do they have a one-size-fits-all program?",
                 "Does the conversation feel like a genuine exchange, or like a sales pitch?",
               ].map((item, i) => (

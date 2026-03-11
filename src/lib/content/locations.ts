@@ -24,7 +24,7 @@ export const locations: LocationPage[] = [
         body: [
           "Phoenix is not Silicon Valley. It is not New York. The leaders here built something different. Less flash, more substance. Companies that actually make things, ship things, serve people. The executive culture here rewards execution over performance theater.",
           "That same pragmatism can become a blind spot. Phoenix leaders tend to push through rather than pause. They solve problems faster than they understand them. Coaching creates the space to slow down just enough to lead with more than momentum.",
-          "[JACK: add what you notice about Phoenix business culture specifically]",
+          "Phoenix is not only one of the fastest-growing cities in the country. It is one of the most innovative. There is an energy here that is rare — ambitious, forward-moving, hungry for what is next. The question is whether you channel that energy or let it run you. Coaching helps you capture it and create something beautiful in your life and business with it.",
         ],
       },
       {
@@ -99,7 +99,7 @@ export const locations: LocationPage[] = [
         body: [
           "Scottsdale collects successful people. Post-exit founders. Semi-retired executives. Leaders who moved here because they could live anywhere and chose sun, golf, and a lower cost of operating. From the outside, it looks like they have figured it out.",
           "From the inside, many are quietly struggling with the question that success was supposed to answer but never does: now what?",
-          "[JACK: add what you see in the Scottsdale executive community specifically]",
+          "What I see in Scottsdale is a community full of people who are satisfied but unfulfilled. The economy is great. The material success is real. But the whole-person support is lacking. There is plenty of wealth and very little inner work. The leaders here have optimized everything external and starved everything internal. That gap is where the coaching begins.",
         ],
       },
       {
@@ -131,7 +131,7 @@ export const locations: LocationPage[] = [
       },
       {
         question: "I just moved to Scottsdale. How do I find the right coach?",
-        answer: "Chemistry matters more than credentials. Have a real conversation with any coach you are considering. You should feel challenged and understood, not sold to. If it feels like a pitch, keep looking.",
+        answer: "Chemistry matters most. Have a real conversation with any coach you are considering. You should feel challenged and understood, not sold to. If it feels like a pitch, keep looking.",
       },
       {
         question: "Do you work with couples where both partners are executives?",
@@ -175,7 +175,7 @@ export const locations: LocationPage[] = [
         body: [
           "There is a reason executives have been coming to Sedona for decades. Not for the vortexes or the crystal shops. For the silence. The scale. The way two hours surrounded by red rock makes the noise of quarterly earnings feel appropriately small.",
           "Sedona is not a vacation. It is a pattern interrupt. And pattern interrupts are where real change happens.",
-          "[JACK: add your personal experience with Sedona and why you bring coaching there]",
+          "Sedona has a special energy. There is a reason it is one of the most visited places in the world for energetic healing, nervous system regulation, vision work, and retreats. I bring coaching here because the landscape does half the work. It strips away the noise and creates space for the kind of honesty that office conversations rarely reach.",
         ],
       },
       {
@@ -256,7 +256,7 @@ export const locations: LocationPage[] = [
         body: [
           "Tucson is not Phoenix. The pace is different. The values are different. The leadership challenges are different. This is a city anchored by the University of Arizona, Raytheon, and a healthcare system serving a region that stretches to the border.",
           "Leaders here tend to be mission-oriented. They care about impact, not just revenue. That idealism is a strength. It can also make the harder business decisions feel like betrayals of values. Coaching helps navigate that tension.",
-          "[JACK: add what you know about Tucson's business community]",
+          "The mountains surrounding Tucson are stunning, and the city carries a unique energy. There is a reason it hosts the largest gem, mineral, and fossil showcase in the world every winter — drawing 65,000 visitors and over 4,000 exhibitors from 44 countries. That same spirit of discovery and depth runs through the leadership community here. Tucson attracts people who care about substance over spectacle.",
         ],
       },
       {

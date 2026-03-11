@@ -59,7 +59,7 @@ export const resources: ContentPage[] = [
         headline: "When you need both",
         body: [
           "Plenty of leaders work with both a coach and a therapist. One for the internal work, one for the professional growth. There is no conflict. The best coaches know when to refer out to a therapist, and the best therapists know when their client needs coaching.",
-          "[JACK: add personal detail about your own experience with both modalities]",
+          "The way I think about it: therapy takes you from dysfunctional to functional. Coaching takes you from functional to exceptional. I have done both. The therapy work gave me a foundation — healing what needed healing so I could actually be present. The coaching work built on that foundation and pushed me toward who I wanted to become. Neither one could have done what the other did.",
         ],
       },
     ],
@@ -142,14 +142,14 @@ export const resources: ContentPage[] = [
         body: [
           "A founder who cannot stop working is not just having a time management problem. A CEO who blows up in meetings is not just having a communication problem. These are whole-person challenges showing up in leadership contexts.",
           "Any coach worth working with understands that the leader and the human are the same person. The question is not whether the work goes deep. The question is whether the coach has the skill and experience to work at the level you need.",
-          "[JACK: add detail about how your coaching integrates both]",
+          "In my work, it is all one thing. I do not draw a line between executive coaching and personal coaching because the line does not exist. We can only build our professional lives, our businesses, to the capacity of our nervous system to handle and regulate it. The ceiling on your leadership is not strategic. It is personal. So the coaching goes wherever the real work is.",
         ],
       },
       {
         headline: "Cost and investment differences",
         body: [
           "Executive coaching typically costs more than life coaching. This reflects the business context, the complexity of the work, and the stakes involved. Executive coaches generally have deeper business experience and more specialized training.",
-          "Life coaches range widely in pricing. Some are excellent and experienced. Others have minimal training. The credential landscape is less standardized.",
+          "Life coaches range widely in pricing. Some are excellent and experienced. Others have minimal training. The landscape is less standardized.",
         ],
       },
     ],
@@ -160,7 +160,7 @@ export const resources: ContentPage[] = [
       },
       {
         question: "Are executive coaches more qualified than life coaches?",
-        answer: "Not inherently. Credentials vary across both fields. Look for a coach with relevant experience, quality training, and a track record with clients at your level. The label matters less than the capability.",
+        answer: "Not inherently. Look for a coach with relevant experience and a track record with clients at your level. The label matters less than the capability.",
       },
       {
         question: "Can one coach do both?",
@@ -168,7 +168,7 @@ export const resources: ContentPage[] = [
       },
       {
         question: "What does 'executive' mean in executive coaching?",
-        answer: "It refers to the context, not a credential. Executive coaching serves leaders in professional roles. It does not mean the coach only works with C-suite executives. Many executive coaches work with founders, VPs, directors, and emerging leaders.",
+        answer: "It refers to the context, not a title. Executive coaching serves leaders in professional roles. It does not mean the coach only works with C-suite executives. Many executive coaches work with founders, VPs, directors, and emerging leaders.",
       },
     ],
     cta: {
@@ -191,7 +191,7 @@ export const resources: ContentPage[] = [
     dateModified: "2026-03-11",
     hero: {
       headline: "How to Choose an Executive Coach",
-      subheadline: "Credentials get you in the door. Chemistry decides if the work goes anywhere.",
+      subheadline: "Experience gets you in the door. Chemistry decides if the work goes anywhere.",
       tag: "Resource Guide",
     },
     sections: [
@@ -203,11 +203,10 @@ export const resources: ContentPage[] = [
         ],
       },
       {
-        headline: "Credentials matter, but not how you think",
+        headline: "Experience matters more than anything on paper",
         body: [
-          "The coaching industry has no universal licensing requirement. Anyone can call themselves an executive coach. Certifications from ICF, CCE, or similar bodies indicate formal training, but they do not guarantee quality.",
-          "What matters more than credentials: has this person led, built, or worked inside organizations at a meaningful level? Do they understand the pressures you face from experience, not just textbooks?",
-          "[JACK: add your perspective on credentials vs real-world experience]",
+          "Has this person led, built, or worked inside organizations at a meaningful level? Do they understand the pressures you face from lived experience, not just textbooks? Have they done their own deep work?",
+          "The best coaches are not the ones with the most letters after their name. They are the ones who have been in the arena, done the inner work themselves, and can meet you at the level you actually operate.",
         ],
       },
       {
@@ -254,8 +253,8 @@ export const resources: ContentPage[] = [
         answer: "Industry experience helps but is not required. A great coach who understands leadership dynamics can work across industries. What matters is whether they understand the level at which you operate.",
       },
       {
-        question: "How important are ICF credentials?",
-        answer: "ICF certification indicates training standards, which matters. But some of the best coaches have unconventional backgrounds. Look at the full picture: training, experience, references, and how the conversation feels.",
+        question: "What should I look for in a coach's background?",
+        answer: "Real experience. Have they led teams, built companies, or navigated the kind of challenges you are facing? Have they done their own personal work? The conversation will tell you more than any resume. If they understand your world, you will feel it immediately.",
       },
       {
         question: "What if I pick the wrong coach?",
@@ -289,7 +288,7 @@ export const resources: ContentPage[] = [
       {
         headline: "What the research shows",
         body: [
-          "The International Coach Federation reports that 86% of companies that invested in coaching saw a positive return. Manchester Consulting Group found a 5.7x average ROI. MetrixGlobal reported 788% ROI for a Fortune 500 company's coaching program.",
+          "The research is clear: companies that invest in coaching see significant returns. Studies have found average ROI of 5 to 7 times the investment, driven by improvements in retention, productivity, and leadership effectiveness.",
           "These numbers are real, but they need context. Most ROI studies measure downstream effects: retention, productivity, revenue. They struggle to isolate coaching's specific contribution from other factors. The honest answer is that coaching ROI is significant but difficult to quantify precisely.",
         ],
       },
@@ -311,7 +310,7 @@ export const resources: ContentPage[] = [
         body: [
           "The most transformative outcomes of executive coaching resist measurement. A founder who stops micromanaging and learns to trust their team. A CEO who shows up differently in board meetings because they are no longer performing confidence but actually feeling it. A leader who stops burning out their best people because they finally addressed their own relationship with control.",
           "These shifts cascade through an organization. They change culture, retention, decision quality, and speed. But no spreadsheet captures the moment a leader sees themselves clearly for the first time.",
-          "[JACK: add a specific client transformation example]",
+          "One client comes to mind. He went from managing through control to leading with playful, powerful presence. He started self-initiating instead of waiting for permission. He demonstrated self-leadership so consistently that his team started doing the same thing. Now everyone in the organization looks at him as the culture keeper. No initiative created that. No offsite. One leader doing his own work, and the ripple did the rest.",
         ],
       },
       {
@@ -325,7 +324,7 @@ export const resources: ContentPage[] = [
     faqs: [
       {
         question: "How do I justify coaching to my board or CFO?",
-        answer: "Frame it as leadership development infrastructure, not a perk. Point to the research: 5-7x ROI is well documented. But also be honest that the most valuable returns, like improved decision-making and cultural impact, resist precise measurement.",
+        answer: "Frame it as leadership development infrastructure, not a perk. The research supports 5 to 7x ROI on average. But also be honest that the most valuable returns, like improved decision-making and cultural impact, resist precise measurement.",
       },
       {
         question: "How long before I see results from coaching?",
@@ -376,7 +375,7 @@ export const resources: ContentPage[] = [
         body: [
           "Most coaching engagements involve sessions every two weeks, lasting 60 to 90 minutes. Some coaches prefer weekly. The rhythm depends on the intensity of the work and the leader's schedule.",
           "Sessions are not lectures. They are conversations. Your coach will ask questions you have not considered. They will hold up a mirror. They will challenge your assumptions. And sometimes they will sit with you in the uncomfortable silence where real insight lives.",
-          "[JACK: add detail about your specific session structure]",
+          "In my sessions, we start with a grounding moment — guided breathing, meditation, or a visualization exercise. We always begin with what is present, because the feelings and thoughts you are carrying are exactly what keep you from being in your present moment. From there, we flow. I hold the long-term vision while making sure we are taking daily aligned action toward making it real. It is structured enough to create momentum and open enough to go wherever the real work needs to go.",
         ],
       },
       {
@@ -454,7 +453,7 @@ export const resources: ContentPage[] = [
         body: [
           "Most executive coaching happens from the neck up. Strategy. Communication. Decision-making frameworks. All useful. All incomplete.",
           "The leader who freezes in a board meeting is not having a strategy problem. The founder who explodes at their team is not having a communication problem. These are nervous system responses. And until you address what is happening in the body, no amount of cognitive coaching changes the pattern.",
-          "[JACK: add your own story of discovering this through yoga and somatic work]",
+          "I did not learn this from a textbook. I learned it through over a decade of personal development, exploration, and deep yoga practice. At some point I had to stop looking for answers outside myself and start paying attention to what was happening inside my body. That is when everything shifted. The nervous system became the lens through which all of my coaching work made sense. Not as a concept. As a lived experience that I now bring to every client relationship.",
         ],
       },
       {

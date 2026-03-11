@@ -26,7 +26,7 @@ const faqItems = [
   {
     question: "Is executive coaching worth the investment?",
     answer:
-      "For leaders who are genuinely ready for the work, the ROI is significant. The ICF reports that 86% of companies see positive returns from coaching investments. Beyond measurable outcomes, leaders consistently report clearer decision-making, stronger presence, and sustainable high performance\u2014benefits that compound over the course of a career.",
+      "For leaders who are genuinely ready for the work, the ROI is significant. Beyond measurable outcomes, leaders consistently report clearer decision-making, stronger presence, and sustainable high performance\u2014benefits that compound over the course of a career.",
   },
   {
     question: "Does insurance cover executive coaching?",

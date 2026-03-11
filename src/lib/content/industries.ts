@@ -20,7 +20,7 @@ export const industries: ContentPage[] = [
         body: [
           "The skills that got you here will not get you there. The intensity, the control, the willingness to do everything yourself. Those were survival traits in the early days. At scale, they become the thing choking your company's growth.",
           "Most founders know this intellectually. They cannot feel it in their bones. That is where coaching comes in.",
-          "[JACK: add specific founder pattern you see repeatedly]",
+          "The pattern I see most often: founders making decisions from tension. When you are clenched, reactive, running on cortisol, every decision feels forced. And forced decisions lead to forced outcomes. When founders learn to regulate their nervous system first, clarity follows. The decision-making improves not because they think harder, but because they finally relax enough to see clearly.",
         ],
       },
       {
@@ -111,7 +111,7 @@ export const industries: ContentPage[] = [
         body: [
           "Most CEO coaching focuses on performance. Hit the numbers. Communicate better. Execute the strategy. That is necessary but insufficient.",
           "The CEOs who sustain excellence over decades do so because they have done the deeper work. They know their patterns. They have reconciled who they are with what the role demands. They lead from identity, not performance.",
-          "[JACK: add specific CEO dynamic you coach on]",
+          "The dynamic I coach on most with CEOs: letting go. The ones who struggle most are too hands-on. They built the thing, so they believe they need to touch everything. But a CEO's job is fundamentally simple — save money, make money, and delegate everything else. The leaders who internalize that create organizations that scale. The ones who cannot let go become the bottleneck they keep trying to optimize around.",
         ],
       },
     ],
@@ -182,7 +182,7 @@ export const industries: ContentPage[] = [
         body: [
           "Every transition book tells you the first 90 days are critical. They are. But not for the reasons those books suggest.",
           "The first 90 days are when your default patterns lock in. The way you manage stress, build relationships, and assert yourself. If those patterns are the same ones you used in your last role, you will get the same results. Sometimes that is fine. Often it is not.",
-          "[JACK: add an example of a leader who transformed their approach during transition]",
+          "One client came in trying to manage a business partner who was also her boss. She was accommodating, strategic, careful — all the things she thought the situation required. The shift happened when she stopped performing the role and started embodying her own authentic expression. The boss who had been dismissive and disrespectful started treating her differently. Not because she learned a new communication framework. Because she stopped shrinking. The dynamic changed because she changed.",
         ],
       },
     ],
@@ -233,7 +233,7 @@ export const industries: ContentPage[] = [
         body: [
           "You have done everything right. The promotions, the compensation, the external markers of success. People look at your career and see someone who has made it. You look at your life and feel a gap you cannot name.",
           "This is not burnout, though it can look like it. It is something quieter. A creeping realization that the engine driving your achievement has been running on fuel that is starting to run out.",
-          "[JACK: add your philosophy on status-fied but unfulfilled]",
+          "Wherever you go, there you are. Climbing a corporate ladder is great for the ego but leaves the heart empty. Because purpose is something bigger than a title. It is not sourced from the org chart or the compensation package or the corner office. It is sourced from within. And most high performers have spent so long optimizing the external game that they have lost contact with the internal one.",
         ],
       },
       {
@@ -311,7 +311,7 @@ export const industries: ContentPage[] = [
         body: [
           "Every leadership challenge has a visible dimension and an invisible one. The visible part is what the team sees: decisions, communication, direction. The invisible part is what drives those behaviors: identity, fear, patterns, values.",
           "Coaching works on both. But the invisible work is where the leverage lives. Change who you are as a leader and everything downstream changes with it.",
-          "[JACK: add your perspective on leadership as identity, not skill set]",
+          "Leadership is a sense of integrity and identity grounded in values that shape how you show up in the world. You can teach someone a feedback framework in an afternoon. You cannot teach them to lead from a place of wholeness without doing the deeper work. Actions without grounded integrity are empty. People feel the difference between a leader performing leadership and a leader embodying it.",
         ],
       },
       {
