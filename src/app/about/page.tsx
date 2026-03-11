@@ -27,35 +27,31 @@ export default function About() {
       <JsonLd data={personSchema} />
 
       {/* Hero */}
-      <section className="hero-gradient min-h-[60vh] flex items-center relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 relative">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <div className="md:col-span-7">
-              <FadeIn delay={0}>
-                <span className="tag mb-8 inline-block">About Jack</span>
-              </FadeIn>
-              <FadeIn delay={100}>
-                <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-deep leading-[1.1] tracking-tight">
-                  {about.hero.headline}
-                </h1>
-              </FadeIn>
+      <section className="hero-gradient relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 pt-24 md:pt-32 pb-12 relative">
+          <FadeIn delay={0}>
+            <span className="tag mb-8 inline-block">About Jack</span>
+          </FadeIn>
+          <FadeIn delay={100}>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-deep leading-[1.1] tracking-tight max-w-3xl">
+              {about.hero.headline}
+            </h1>
+          </FadeIn>
+        </div>
+        <div className="max-w-5xl mx-auto px-6 pb-16 md:pb-24">
+          <FadeIn delay={200}>
+            <div className="photo-cinematic relative rounded-softer overflow-hidden">
+              <Image
+                src="/images/jack-sedona-smiling.jpg"
+                alt="Jack Rosenkrantz smiling in Sedona, Arizona"
+                width={1600}
+                height={1066}
+                sizes="(max-width: 768px) 100vw, 80vw"
+                className="relative rounded-softer shadow-lifted object-cover w-full max-h-[500px]"
+                priority
+              />
             </div>
-            <div className="md:col-span-5">
-              <FadeIn delay={200} direction="right">
-                <div className="photo-cinematic relative rounded-softer overflow-hidden">
-                  <Image
-                    src="/images/jack-sedona-smiling.jpg"
-                    alt="Jack Rosenkrantz smiling in Sedona, Arizona"
-                    width={1600}
-                    height={1066}
-                    sizes="(max-width: 768px) 100vw, 40vw"
-                    className="relative rounded-softer shadow-lifted object-cover w-full"
-                    priority
-                  />
-                </div>
-              </FadeIn>
-            </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
