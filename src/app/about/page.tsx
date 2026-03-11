@@ -38,16 +38,16 @@ export default function About() {
             </h1>
           </FadeIn>
         </div>
-        <div className="max-w-5xl mx-auto px-6 pb-16 md:pb-24">
+        <div className="max-w-6xl mx-auto px-6 pb-16 md:pb-24">
           <FadeIn delay={200}>
-            <div className="photo-cinematic relative rounded-softer overflow-hidden">
+            <div className="photo-cinematic relative rounded-softer overflow-hidden w-[60%] md:w-[35%]">
               <Image
                 src="/images/jack-sedona-smiling.jpg"
                 alt="Jack Rosenkrantz smiling in Sedona, Arizona"
                 width={1600}
                 height={1066}
-                sizes="(max-width: 768px) 100vw, 80vw"
-                className="relative rounded-softer shadow-lifted object-cover w-full max-h-[500px]"
+                sizes="(max-width: 768px) 60vw, 25vw"
+                className="relative rounded-softer shadow-lifted object-cover w-full"
                 priority
               />
             </div>
