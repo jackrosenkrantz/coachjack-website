@@ -1,44 +1,68 @@
 import type { MetadataRoute } from "next";
+import { resources } from "@/lib/content/resources";
+import { industries } from "@/lib/content/industries";
+import { locations } from "@/lib/content/locations";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://coachjack.xyz";
+  const base = "https://coachjack.xyz";
 
   return [
+    // Static pages
     {
-      url: baseUrl,
+      url: base,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: `${baseUrl}/coaching`,
+      url: `${base}/coaching`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${base}/about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${base}/contact`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.7,
     },
+
+    // Resources hub
     {
-      url: `${baseUrl}/resources/what-is-executive-coaching`,
+      url: `${base}/resources`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.8,
     },
-    {
-      url: `${baseUrl}/resources/executive-coaching-cost`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+
+    // Resource guides (includes existing 2 + new 6)
+    ...resources.map((r) => ({
+      url: `${base}/resources/${r.slug}`,
+      lastModified: new Date(r.dateModified),
+      changeFrequency: "monthly" as const,
       priority: 0.7,
-    },
+    })),
+
+    // Niche/industry pages
+    ...industries.map((i) => ({
+      url: `${base}/coaching/for-${i.slug}`,
+      lastModified: new Date(i.dateModified),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+
+    // Location pages
+    ...locations.map((l) => ({
+      url: `${base}/coaching/in-${l.slug}`,
+      lastModified: new Date(l.dateModified),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
   ];
 }
