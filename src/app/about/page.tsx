@@ -42,19 +42,16 @@ export default function About() {
             </div>
             <div className="md:col-span-5">
               <FadeIn delay={200} direction="right">
-                <div className="photo-dark relative rounded-softer overflow-hidden">
-                  <picture>
-                    <source media="(max-width: 768px)" srcSet="/images/jack-headshot-mobile.jpg" />
-                    <Image
-                      src="/images/jack-headshot.jpg"
-                      alt="Jack Rosenkrantz - Executive Coach"
-                      width={500}
-                      height={750}
-                      sizes="(max-width: 768px) 100vw, 40vw"
-                      className="relative rounded-softer shadow-lifted object-cover w-full max-h-[400px] md:max-h-none"
-                      priority
-                    />
-                  </picture>
+                <div className="photo-cinematic relative rounded-softer overflow-hidden">
+                  <Image
+                    src="/images/jack-sedona-smiling.jpg"
+                    alt="Jack Rosenkrantz smiling in Sedona, Arizona"
+                    width={1600}
+                    height={1066}
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    className="relative rounded-softer shadow-lifted object-cover w-full"
+                    priority
+                  />
                 </div>
               </FadeIn>
             </div>
