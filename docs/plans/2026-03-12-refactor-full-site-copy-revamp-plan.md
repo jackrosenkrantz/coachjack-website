@@ -1,7 +1,7 @@
 ---
 title: Full Site Copy Revamp
 type: refactor
-status: active
+status: completed
 date: 2026-03-12
 origin: docs/brainstorms/2026-03-12-site-copy-revamp-brainstorm.md
 ---
