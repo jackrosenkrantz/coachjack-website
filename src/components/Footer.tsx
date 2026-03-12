@@ -55,7 +55,7 @@ export default function Footer() {
 
           {/* Coaching */}
           <div>
-            <h4 className="font-serif text-deep mb-4">Coaching</h4>
+            <h3 className="font-serif text-deep mb-4 text-base">Coaching</h3>
             <div className="flex flex-col gap-2">
               {coachingLinks.map((link) => (
                 <Link
@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="font-serif text-deep mb-4">Resources</h4>
+            <h3 className="font-serif text-deep mb-4 text-base">Resources</h3>
             <div className="flex flex-col gap-2">
               {resourceLinks.map((link) => (
                 <Link
@@ -105,7 +105,7 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h4 className="font-serif text-deep mb-4">Connect</h4>
+            <h3 className="font-serif text-deep mb-4 text-base">Connect</h3>
             <div className="flex flex-col gap-2 text-sm">
               <a
                 href={`mailto:${siteContent.email}`}

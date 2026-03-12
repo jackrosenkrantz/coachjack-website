@@ -45,9 +45,9 @@ export default function Home() {
               <FadeIn delay={200} direction="right">
                 <div className="photo-cinematic relative rounded-softer overflow-hidden">
                   <picture>
-                    <source media="(max-width: 768px)" srcSet="/images/jack-heart-sedona-mobile.jpg" />
+                    <source media="(max-width: 768px)" srcSet="/images/jack-heart-sedona-mobile.webp" />
                     <Image
-                      src="/images/jack-heart-sedona.jpg"
+                      src="/images/jack-heart-sedona.webp"
                       alt="Jack Rosenkrantz - Executive Coach in Sedona, Arizona"
                       width={800}
                       height={533}
@@ -115,7 +115,7 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-2 md:gap-4">
               <div className="photo-amber relative rounded-soft md:rounded-softer overflow-hidden aspect-[3/4] md:aspect-[4/3]">
                 <Image
-                  src="/images/retreat-25.jpg"
+                  src="/images/retreat-25.webp"
                   alt="Jack playing guitar at a Sedona retreat"
                   fill
                   sizes="33vw"
@@ -124,7 +124,7 @@ export default function Home() {
               </div>
               <div className="photo-dark relative rounded-soft md:rounded-softer overflow-hidden aspect-[3/4] md:aspect-[4/3]">
                 <Image
-                  src="/images/retreat-32.jpg"
+                  src="/images/retreat-32.webp"
                   alt="Jack in warrior yoga pose with Sedona red rocks"
                   fill
                   sizes="33vw"
@@ -133,7 +133,7 @@ export default function Home() {
               </div>
               <div className="photo-cinematic relative rounded-soft md:rounded-softer overflow-hidden aspect-[3/4] md:aspect-[4/3]">
                 <Image
-                  src="/images/retreat-133.jpg"
+                  src="/images/retreat-133.webp"
                   alt="Retreat circle facilitation in Sedona"
                   fill
                   sizes="33vw"
@@ -154,11 +154,14 @@ export default function Home() {
           </div>
         </FadeIn>
         <div className="testimonial-grid">
-          {getTestimonialsForContext("homepage").map((t, i) => (
-            <FadeIn key={t.id} delay={i * 80}>
-              <TestimonialCard testimonial={t} compact />
-            </FadeIn>
-          ))}
+          {getTestimonialsForContext("homepage").map((t, i) => {
+            const variants = ["default", "warm", "accent"] as const;
+            return (
+              <FadeIn key={t.id} delay={i * 80}>
+                <TestimonialCard testimonial={t} compact variant={variants[i % 3]} />
+              </FadeIn>
+            );
+          })}
         </div>
       </Section>
 
@@ -169,7 +172,7 @@ export default function Home() {
             <FadeIn direction="left">
               <div className="photo-grain relative rounded-softer overflow-hidden">
                 <Image
-                  src="/images/retreat-250.jpg"
+                  src="/images/retreat-250.webp"
                   alt="Jack Rosenkrantz in contemplation with Sedona red rocks"
                   width={1200}
                   height={800}

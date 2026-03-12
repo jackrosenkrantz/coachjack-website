@@ -16,7 +16,7 @@ export default function ServiceCard({
   return (
     <Link
       href={href}
-      className="group block card-dark p-8 md:p-10"
+      className="group block card-feature p-8 md:p-10"
     >
       <div className="flex flex-col h-full">
         <div className="w-10 h-10 rounded-full bg-amber-light flex items-center justify-center mb-6 group-hover:bg-amber/10 transition-colors">

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/images/jack-hero.jpg",
+        url: "/images/jack-hero.webp",
         width: 1200,
         height: 630,
         alt: "Jack Rosenkrantz - Executive Coach in Phoenix, Arizona",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteContent.meta.home.title,
     description: siteContent.meta.home.description,
-    images: ["/images/jack-hero.jpg"],
+    images: ["/images/jack-hero.webp"],
   },
   robots: {
     index: true,

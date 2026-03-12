@@ -61,7 +61,7 @@ export const organizationSchema = {
   "@type": "Organization",
   name: "Jack Rosenkrantz Executive Coaching",
   url: "https://coachjack.xyz",
-  logo: "https://coachjack.xyz/images/jack-hero.jpg",
+  logo: "https://coachjack.xyz/images/jack-hero.webp",
   email: "jack@coachjack.xyz",
   founder: {
     "@type": "Person",

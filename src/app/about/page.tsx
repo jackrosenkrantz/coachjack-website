@@ -28,7 +28,7 @@ export default function About() {
 
       {/* Hero */}
       <section className="hero-gradient relative overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6 pt-24 md:pt-32 pb-4 relative">
+        <div className="max-w-6xl mx-auto px-6 pt-24 md:pt-32 pb-0 relative">
           <FadeIn delay={0}>
             <span className="tag mb-8 inline-block">About Jack</span>
           </FadeIn>
@@ -38,11 +38,11 @@ export default function About() {
             </h1>
           </FadeIn>
         </div>
-        <div className="max-w-6xl mx-auto px-6 pb-8 md:pb-16">
+        <div className="max-w-6xl mx-auto px-6 pb-4 md:pb-8">
           <FadeIn delay={200}>
-            <div className="photo-cinematic relative rounded-softer overflow-hidden w-[60%] md:w-[35%] ml-12 md:ml-24">
+            <div className="photo-cinematic relative rounded-softer overflow-hidden w-[75%] md:w-[45%] ml-24 md:ml-48">
               <Image
-                src="/images/jack-sedona-smiling.jpg"
+                src="/images/jack-sedona-smiling.webp"
                 alt="Jack Rosenkrantz smiling in Sedona, Arizona"
                 width={1600}
                 height={1066}
@@ -56,7 +56,7 @@ export default function About() {
       </section>
 
       {/* The Wound */}
-      <Section>
+      <Section className="!pt-6 md:!pt-8">
         <div className="max-w-3xl">
           <FadeIn>
             <div className="space-y-6 text-earth leading-relaxed text-lg">
@@ -76,7 +76,7 @@ export default function About() {
               <FadeIn direction="left">
                 <div className="photo-grain relative rounded-softer overflow-hidden">
                   <Image
-                    src="/images/retreat-23.jpg"
+                    src="/images/retreat-23.webp"
                     alt="Jack Rosenkrantz with hand on heart, eyes closed in Sedona"
                     width={1200}
                     height={800}
@@ -123,7 +123,7 @@ export default function About() {
               <div className="my-10">
                 <div className="photo-cinematic relative rounded-softer overflow-hidden">
                   <Image
-                    src="/images/retreat-132.jpg"
+                    src="/images/retreat-132.webp"
                     alt="Jack facilitating a retreat circle in Sedona"
                     width={1200}
                     height={800}
@@ -162,7 +162,7 @@ export default function About() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {about.credentials.items.map((item, i) => (
-                <div key={i} className="flex items-start gap-4 card-dark p-5">
+                <div key={i} className={`flex items-start gap-4 ${i % 2 === 0 ? "card-dark" : "card-warm"} p-5`}>
                   <span className="w-6 h-6 rounded-full bg-amber-light flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                       <path d="M3 8l4 4 6-8" stroke="var(--color-amber)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -178,7 +178,7 @@ export default function About() {
             <div className="mt-8">
               <div className="photo-amber relative rounded-softer overflow-hidden">
                 <Image
-                  src="/images/retreat-30.jpg"
+                  src="/images/retreat-30.webp"
                   alt="Jack Rosenkrantz playing guitar and laughing in Sedona"
                   width={1200}
                   height={800}
@@ -199,11 +199,14 @@ export default function About() {
           </div>
         </FadeIn>
         <div className="testimonial-grid">
-          {getTestimonialsForContext("about").map((t, i) => (
-            <FadeIn key={t.id} delay={i * 80}>
-              <TestimonialCard testimonial={t} compact />
-            </FadeIn>
-          ))}
+          {getTestimonialsForContext("about").map((t, i) => {
+            const variants = ["default", "warm", "accent"] as const;
+            return (
+              <FadeIn key={t.id} delay={i * 80}>
+                <TestimonialCard testimonial={t} compact variant={variants[i % 3]} />
+              </FadeIn>
+            );
+          })}
         </div>
       </Section>
 

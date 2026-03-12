@@ -56,9 +56,9 @@ export default function Coaching() {
               <FadeIn delay={200} direction="right">
                 <div className="photo-amber relative rounded-softer overflow-hidden">
                   <picture>
-                    <source media="(max-width: 768px)" srcSet="/images/retreat-254-mobile.jpg" />
+                    <source media="(max-width: 768px)" srcSet="/images/retreat-254-mobile.webp" />
                     <Image
-                      src="/images/retreat-254.jpg"
+                      src="/images/retreat-254.webp"
                       alt="Jack Rosenkrantz smiling in Sedona, Arizona"
                       width={1200}
                       height={800}
@@ -106,7 +106,7 @@ export default function Coaching() {
           <FadeIn>
             <div className="photo-dark relative rounded-softer overflow-hidden">
               <Image
-                src="/images/retreat-196.jpg"
+                src="/images/retreat-196.webp"
                 alt="Jack Rosenkrantz in meditation practice"
                 width={1200}
                 height={800}
@@ -161,9 +161,9 @@ export default function Coaching() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {coaching.outcomes.items.map((outcome, i) => (
             <FadeIn key={i} delay={i * 80}>
-              <div className="card-dark p-8 md:p-10">
+              <div className={`${i % 2 === 0 ? "card-dark" : "card-warm"} p-8 md:p-10`}>
                 <div className="w-10 h-10 rounded-full bg-amber-light flex items-center justify-center mb-5">
-                  <div className="w-2 h-2 rounded-full bg-amber" />
+                  <div className={`w-2 h-2 rounded-full ${i % 2 === 0 ? "bg-amber" : "bg-terracotta"}`} />
                 </div>
                 <h3 className="font-serif text-xl text-deep mb-3">{outcome.title}</h3>
                 <p className="text-earth leading-relaxed text-sm">{outcome.body}</p>
@@ -180,7 +180,7 @@ export default function Coaching() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
               <div className="photo-amber relative rounded-soft md:rounded-softer overflow-hidden aspect-square md:aspect-[4/3]">
                 <Image
-                  src="/images/retreat-63.jpg"
+                  src="/images/retreat-63.webp"
                   alt="Outdoor group yoga class in Sedona"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
@@ -189,7 +189,7 @@ export default function Coaching() {
               </div>
               <div className="photo-cinematic relative rounded-soft md:rounded-softer overflow-hidden aspect-square md:aspect-[4/3]">
                 <Image
-                  src="/images/retreat-16.jpg"
+                  src="/images/retreat-16.webp"
                   alt="Jack Rosenkrantz with confident, direct gaze in Sedona"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
@@ -198,7 +198,7 @@ export default function Coaching() {
               </div>
               <div className="photo-grain relative rounded-soft md:rounded-softer overflow-hidden aspect-square md:aspect-[4/3]">
                 <Image
-                  src="/images/retreat-134.jpg"
+                  src="/images/retreat-134.webp"
                   alt="Close-up journaling detail at retreat"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
@@ -207,7 +207,7 @@ export default function Coaching() {
               </div>
               <div className="photo-dark relative rounded-soft md:rounded-softer overflow-hidden aspect-square md:aspect-[4/3]">
                 <Image
-                  src="/images/retreat-148.jpg"
+                  src="/images/retreat-148.webp"
                   alt="Jack facilitating at whiteboard during retreat"
                   fill
                   sizes="(max-width: 768px) 50vw, 25vw"
@@ -228,11 +228,14 @@ export default function Coaching() {
           </div>
         </FadeIn>
         <div className="testimonial-grid">
-          {getTestimonialsForContext("coaching").map((t, i) => (
-            <FadeIn key={t.id} delay={i * 80}>
-              <TestimonialCard testimonial={t} compact />
-            </FadeIn>
-          ))}
+          {getTestimonialsForContext("coaching").map((t, i) => {
+            const variants = ["default", "warm", "accent"] as const;
+            return (
+              <FadeIn key={t.id} delay={i * 80}>
+                <TestimonialCard testimonial={t} compact variant={variants[i % 3]} />
+              </FadeIn>
+            );
+          })}
         </div>
       </Section>
 
@@ -243,7 +246,7 @@ export default function Coaching() {
             <FadeIn direction="left">
               <div className="photo-grain relative rounded-softer overflow-hidden">
                 <Image
-                  src="/images/retreat-64.jpg"
+                  src="/images/retreat-64.webp"
                   alt="Outdoor yoga and stretching with Cathedral Rock, Sedona retreat"
                   width={1200}
                   height={800}

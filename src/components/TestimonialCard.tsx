@@ -3,21 +3,33 @@ import { Testimonial } from "@/lib/testimonials";
 interface TestimonialCardProps {
   testimonial: Testimonial;
   compact?: boolean;
+  variant?: "default" | "warm" | "accent";
 }
 
 export default function TestimonialCard({
   testimonial,
   compact = false,
+  variant = "default",
 }: TestimonialCardProps) {
   const quote =
     compact && testimonial.shortQuote
       ? testimonial.shortQuote
       : testimonial.quote;
 
+  const cardClass =
+    variant === "warm"
+      ? "card-warm"
+      : variant === "accent"
+        ? "card-accent"
+        : "card-dark";
+
+  const quoteColor =
+    variant === "warm" ? "text-amber/30" : variant === "accent" ? "text-terracotta/30" : "text-stone";
+
   return (
-    <div className="relative card-dark p-8 md:p-10">
+    <div className={`relative ${cardClass} p-8 md:p-10`}>
       {/* Quote mark accent */}
-      <div className="absolute top-6 left-8 text-stone font-serif text-6xl leading-none select-none" aria-hidden="true">
+      <div className={`absolute top-6 left-8 ${quoteColor} font-serif text-6xl leading-none select-none`} aria-hidden="true">
         &ldquo;
       </div>
 
