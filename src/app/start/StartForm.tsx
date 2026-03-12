@@ -17,7 +17,7 @@ const inputStyle: React.CSSProperties = {
 };
 
 const labelStyle: React.CSSProperties = {
-  color: "#9a918a",
+  color: "#b5aca4",
   fontSize: "13px",
   fontWeight: 500,
   letterSpacing: "0.02em",
@@ -76,7 +76,7 @@ export default function StartForm() {
         >
           Check your email
         </h2>
-        <p className="text-base mb-10" style={{ color: "#9a918a" }}>
+        <p className="text-base mb-10" style={{ color: "#b5aca4" }}>
           We sent you a magic link to enter The Portal. It expires in 10
           minutes.
         </p>
@@ -92,7 +92,7 @@ export default function StartForm() {
             >
               The Portal
             </div>
-            <p className="text-xs" style={{ color: "#7a726b" }}>
+            <p className="text-xs" style={{ color: "#958d86" }}>
               AI-guided transformation journey. Check your inbox for the magic
               link.
             </p>
@@ -123,7 +123,7 @@ export default function StartForm() {
             >
               Discovery Call
             </div>
-            <p className="text-xs" style={{ color: "#7a726b" }}>
+            <p className="text-xs" style={{ color: "#958d86" }}>
               Want to go deeper? Book a real conversation with Jack.
             </p>
           </a>
@@ -256,7 +256,7 @@ export default function StartForm() {
         disabled={isPending}
         className="w-full py-4 rounded-lg text-base font-medium transition-all"
         style={{
-          background: isPending ? "#7a726b" : "#c4956a",
+          background: isPending ? "#958d86" : "#c4956a",
           color: "#1a1714",
           cursor: isPending ? "wait" : "pointer",
           border: "none",
@@ -275,7 +275,7 @@ export default function StartForm() {
 
       <p
         className="text-center text-xs"
-        style={{ color: "#7a726b" }}
+        style={{ color: "#958d86" }}
       >
         Free to start &middot; 7-day trial &middot; No credit card required
       </p>
