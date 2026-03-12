@@ -1,6 +1,6 @@
 // site-content.ts - All copy content for coachjack.xyz
-// Voice: Jack's LinkedIn posts — poetic, philosophical, occasionally profane.
-// Structure: Problem-Agitation-Solution. Every headline passes "would a CEO stop scrolling?" test.
+// Voice: Professional authority with warmth. Direct, concrete, human.
+// Structure: Problem-first, then clarity. Every headline earns the next line.
 
 export const siteContent = {
   // ============================================
@@ -30,13 +30,13 @@ export const siteContent = {
   },
 
   // ============================================
-  // HOMEPAGE — Identity-level provocation, premium positioning
+  // HOMEPAGE — Clear value prop, professional authority
   // ============================================
   home: {
     hero: {
-      headline: "Status-fied but unfulfilled?",
+      headline: "Lead from who you actually are.",
       subheadline:
-        "You don\u2019t need another strategy. You need to meet the person behind the performance. Executive coaching for founders and leaders ready to close the gap between who they appear to be and who they actually are.",
+        "Executive coaching for founders and leaders who want their internal operating system to match what they\u2019ve built. Not tactics. Not cheerleading. The real work of leadership.",
       cta: {
         label: "Start a Conversation",
         href: "/start",
@@ -45,20 +45,20 @@ export const siteContent = {
 
     philosophy: {
       headline: "The answer isn\u2019t more. It\u2019s less.",
-      body: "You don\u2019t need another framework, another productivity system, another version of yourself to perform. The leaders who change industries are the ones who stop managing their image and start trusting their presence. That\u2019s not soft\u2014it\u2019s the hardest work you\u2019ll ever do.",
+      body: "You don\u2019t need another framework or another version of yourself to perform. The leaders who build things that last are the ones who stop managing their image and start operating from something real. That takes a different kind of work.",
     },
 
     services: [
       {
         title: "1:1 Coaching",
         description:
-          "Deep, private work for founders and C-suite leaders navigating what no one prepared them for. Not tactics. Not cheerleading. The honest conversation you can\u2019t have with your board, your team, or yourself.",
+          "Private coaching for founders and C-suite leaders. Not tactics. Not cheerleading. The honest conversation you can\u2019t have with your board, your team, or yourself.",
         cta: { label: "Learn More", href: "/coaching" },
       },
       {
         title: "The Portal",
         description:
-          "An AI-guided journey that surfaces the patterns running your leadership before you walk into a room with me. Four phases. Real mirrors. $20/mo.",
+          "An AI-guided tool that surfaces the patterns running your leadership. Four phases of structured reflection. $20/mo.",
         cta: { label: "Enter The Portal", href: "/start" },
       },
     ],
@@ -66,26 +66,26 @@ export const siteContent = {
     differentiator: {
       headline: "I don\u2019t coach the role. I coach the human wearing it.",
       body: [
-        "Most coaching is a performance review with better questions. I work at the level where decisions actually get made\u2014your nervous system, your identity, the stories you\u2019ve mistaken for truth. The gap between your title and your experience of being alive.",
-        "A decade of sales leadership taught me how performance works. Sobriety, 500+ hours of yoga training, and years of retreat facilitation taught me what happens when it stops working. I bring both.",
+        "Most coaching is a performance review with better questions. I work where decisions actually get made\u2014your nervous system, your identity, the patterns you\u2019ve never examined. That\u2019s where leadership actually lives.",
+        "A decade of sales leadership taught me how performance works. Sobriety, 500+ hours of yoga training, and years of retreat facilitation taught me what happens when it stops working. I bring both sides.",
       ],
     },
 
     cta: {
-      text: "What would change if you stopped performing?",
+      text: "Ready for a different kind of conversation?",
       label: "Start a Conversation",
       href: "/start",
     },
   },
 
   // ============================================
-  // COACHING PAGE — Pattern-Interrupt-Invitation framework
+  // COACHING PAGE — Problem-first, then invitation
   // ============================================
   coaching: {
     hero: {
-      headline: "You\u2019ve achieved everything they told you to want.",
+      headline: "Your leadership got you here. What gets you further?",
       subheadline:
-        "And something still isn\u2019t right. This is coaching for the person behind the performance\u2014not the role on your LinkedIn.",
+        "Coaching for the person behind the performance\u2014not the role on your LinkedIn. For founders and leaders ready to do the real work.",
     },
 
     pattern: {
@@ -95,15 +95,15 @@ export const siteContent = {
       points: [
         {
           title: "The performance trap",
-          body: "You\u2019ve optimized everything except the thing that matters most. The team sees confidence. You feel compression. Another quarter of performing a version of yourself that used to fit.",
+          body: "You\u2019ve optimized everything except how you actually operate. Your team sees confidence. You feel the cost of maintaining it. The gap between the leader people see and the person you experience keeps growing.",
         },
         {
           title: "The isolation",
-          body: "A hundred people depend on you and you have no one to talk to. You can\u2019t say this to your board. You can\u2019t say it to your partner. So you keep solving, keep producing, keep disappearing.",
+          body: "You\u2019re the person everyone depends on and no one checks in on. You can\u2019t have this conversation with your board, your partner, or your team. So you keep producing.",
         },
         {
-          title: "The hollow win",
-          body: "You hit the number. Got the title. Built the thing from nothing. And now you\u2019re asking the question you never expected: is this it?",
+          title: "The plateau",
+          body: "You hit the number. Got the title. Built something real. And now the same habits that got you here are the ones holding you back from what\u2019s next.",
         },
       ],
     },
@@ -111,13 +111,13 @@ export const siteContent = {
     approach: {
       headline: "How I work.",
       intro:
-        "This isn\u2019t coaching for people who want a cheerleader. This is for leaders ready to meet themselves\u2014nervous system, shadow, and all.",
+        "This isn\u2019t coaching for people who want a cheerleader. I work at the nervous system level\u2014where your leadership patterns actually live.",
       items: [
-        "Leadership presence\u2014not charisma, but the capacity to hold space when everything in you wants to react",
-        "Decision-making from clarity, not the anxiety spiral at 2am",
-        "Navigating the transitions nobody prepared you for\u2014the exit, the pivot, the promotion that broke something",
+        "Leadership presence\u2014the capacity to stay grounded when everything in you wants to react",
+        "Decision-making from clarity instead of anxiety",
+        "Navigating major transitions\u2014exits, pivots, promotions, and the identity shifts that come with them",
         "Team dynamics that start with your own nervous system regulation",
-        "Sustainable high performance that doesn\u2019t cost you your health or your marriage",
+        "Sustainable high performance that doesn\u2019t cost you your health or your relationships",
       ],
     },
 
@@ -125,27 +125,27 @@ export const siteContent = {
       headline: "What changes.",
       items: [
         {
-          title: "Composure under fire",
-          body: "The board room. The hard conversation. The decision that\u2019s been keeping you up. You stop bracing and start meeting it.",
+          title: "Composure under pressure",
+          body: "Board meetings, hard conversations, high-stakes decisions. You stop bracing and start leading through them.",
         },
         {
           title: "Decisions from clarity",
-          body: "The spiral quiets. Choices stop coming from anxiety and start coming from a place you trust. Your team notices before you do.",
+          body: "The 2am spiral quiets. You make choices from a grounded place instead of a reactive one. Your team notices the shift before you do.",
         },
         {
           title: "Leadership that\u2019s actually yours",
-          body: "Not the version you\u2019ve been performing. Something quieter, more grounded, and more powerful than anything you could manufacture.",
+          body: "Not the version you\u2019ve been performing. Something more grounded, more effective, and built on who you actually are.",
         },
         {
           title: "A life that matches the resume",
-          body: "Success that doesn\u2019t hollow you out. Performance that comes from alignment, not adrenaline. The outside and the inside finally in the same room.",
+          body: "Performance that comes from alignment, not adrenaline. Success you can actually feel.",
         },
       ],
     },
 
     retreats: {
       headline: "Sedona Retreats",
-      body: "Immersive coaching in Sedona\u2019s red rock landscape\u2014coaching, yoga, breathwork, and nature woven into intensive formats designed to move you faster than a weekly call ever could. For group retreat experiences, visit Becoming the Bridge.",
+      body: "Immersive coaching intensives in Sedona\u2014combining coaching, yoga, breathwork, and nature into formats that create more movement than months of weekly calls. For group retreat experiences, visit Becoming the Bridge.",
       cta: {
         label: "Visit Becoming the Bridge",
         href: "https://www.becomingthebridge.co",
@@ -153,12 +153,12 @@ export const siteContent = {
     },
 
     faq: {
-      headline: "Questions worth asking",
+      headline: "Common questions",
       items: [
         {
           question: "How is this different from therapy?",
           answer:
-            "Coaching is forward-focused. We work with the nervous system and the patterns beneath your decisions, but always in service of how you lead and show up. When therapy is what\u2019s needed, I\u2019ll say so.",
+            "Coaching is forward-focused. We work with the nervous system and the patterns beneath your decisions, but always in service of how you lead and perform. When therapy is what\u2019s needed, I\u2019ll say so.",
         },
         {
           question: "Do you work virtually or in person?",
@@ -168,7 +168,7 @@ export const siteContent = {
         {
           question: "What\u2019s the time commitment?",
           answer:
-            "Most engagements run 3\u20136 months, with bi-weekly sessions and async support between calls. The point is to build your own capacity\u2014not dependence on a coach.",
+            "Most engagements run 3\u20136 months, with bi-weekly sessions and async support between calls. The goal is to build your own capacity, not dependence on a coach.",
         },
         {
           question: "What does the investment look like?",
@@ -178,24 +178,24 @@ export const siteContent = {
         {
           question: "What is The Portal?",
           answer:
-            "A $20/month AI-guided journey that surfaces the patterns running your leadership before you walk into a room with me. Four phases of Socratic conversation. A starting point\u2014or a complement to 1:1 work.",
+            "A $20/month AI-guided tool that surfaces the patterns running your leadership. Four phases of structured reflection. Works as a starting point or a complement to 1:1 coaching.",
         },
         {
           question: "Who is this for?",
           answer:
-            "Founders who built eight-figure companies and can\u2019t sleep. VPs who got the promotion and lost the plot. CEOs with a hundred people depending on them and no one to be honest with. If you\u2019re feeling the cost of success\u2014this work is for you.",
+            "Founders scaling past what got them here. Executives navigating transitions they weren\u2019t prepared for. Leaders who want to perform at a higher level without burning out to do it. If you\u2019re ready for honest work, this is for you.",
         },
       ],
     },
 
     investment: {
       headline: "Investment",
-      body: "Engagements start at 3 months. Most clients stay for 6 months or longer\u2014not because they have to, but because the work keeps revealing what matters. Month-to-month after the initial commitment. Reach out to talk about what fits.",
+      body: "Engagements start at 3 months. Most clients stay for 6 months or longer\u2014not because they have to, but because the work compounds. Month-to-month after the initial commitment. Reach out to talk about what fits.",
     },
 
     cta: {
-      text: "The program stopped working. Now what?",
-      label: "Have the Conversation",
+      text: "Ready for a different kind of conversation?",
+      label: "Start Here",
       href: "/start",
     },
   },
@@ -210,24 +210,24 @@ export const siteContent = {
 
     wound: {
       body: [
-        "For years, I chased a version of success that looked impressive from the outside. VP of Sales. Escalating titles. The metrics of a life well-lived\u2014if you measured by someone else\u2019s scorecard.",
-        "Inside, something was breaking. The mosaic table I\u2019d built\u2014piece by piece, achievement by achievement\u2014was coming apart. I was sleeping in the living room of my own life, disconnected from the person I was supposed to be becoming.",
+        "I spent a decade in sales leadership. VP titles, growing teams, hitting numbers. From the outside it looked like a career on a trajectory. From the inside, it was costing me more than I knew how to measure.",
+        "I was good at performing. I was burning out doing it. The gap between how things looked and how they felt kept getting wider.",
       ],
     },
 
     awakening: {
       body: [
-        "Then I walked into a yoga class. Not because I was seeking enlightenment\u2014I was seeking relief.",
-        "What I found was breath. Presence. The radical idea that I didn\u2019t need to add anything to become whole. That the answer was subtraction, not addition.",
-        "Sobriety followed. Then a decade of transformational retreats, study across wisdom traditions, and the slow, humbling work of becoming myself.",
+        "I walked into a yoga class looking for relief. What I found was a completely different way to operate.",
+        "Sobriety followed. Then years of training\u2014500+ hours of yoga certification, retreat facilitation in Sedona, study across somatic and contemplative traditions. Not as an escape from leadership, but as a deeper education in it.",
+        "I learned that the nervous system runs the show. That most leaders are making decisions from survival patterns they\u2019ve never examined. And that the real work of leadership is internal.",
       ],
     },
 
     work: {
       headline: "The work now",
       body: [
-        "Now I hold space for others walking this path\u2014founders who built the company and lost themselves in the process, executives who got the corner office and can\u2019t feel anything, leaders whose teams see confidence while they feel compression.",
-        "I work from my home base in Arizona\u2014Phoenix, Scottsdale, Sedona, and nationwide. The format is private. The conversations are honest. And the work goes to the places most coaching is afraid to touch.",
+        "I coach founders and executives who\u2019ve built impressive things and want their leadership to match what they\u2019ve built. Some are navigating a crisis. Others want to lead at a level their current habits can\u2019t sustain. Both require the same thing: honest work at the identity level.",
+        "I\u2019m based in Arizona\u2014Phoenix, Scottsdale, Sedona\u2014and work with clients nationwide. Sessions are private, direct, and go to the places most coaching avoids.",
       ],
       approachLabel: "My approach draws from:",
       bullets: [
@@ -235,10 +235,10 @@ export const siteContent = {
         "500+ hours of yoga teacher training",
         "Years facilitating transformational retreats in Sedona",
         "Somatic and nervous system practices",
-        "The wisdom traditions that remind us who we already are",
+        "Contemplative traditions that ground the work in something deeper than tactics",
       ],
       closing:
-        "I don\u2019t coach people to optimize. I coach them to come home.",
+        "I don\u2019t coach people to optimize. I coach them to lead from who they actually are.",
     },
 
     credentials: {
@@ -251,7 +251,7 @@ export const siteContent = {
         "Based in Phoenix, Arizona",
       ],
       personal:
-        "When I\u2019m not coaching, I\u2019m playing guitar, writing, or somewhere in the desert. This place is home.",
+        "When I\u2019m not coaching, I\u2019m playing guitar, writing, or somewhere in the desert.",
     },
 
     cta: {
@@ -267,7 +267,7 @@ export const siteContent = {
   contact: {
     hero: {
       headline: "Tell me what\u2019s going on.",
-      body: "No pitch. No pressure. Start with the intake form or reach out directly. Either way, the first conversation is just that\u2014a conversation.",
+      body: "No pitch. No pressure. Start with the intake form or reach out directly. The first conversation is just that\u2014a conversation.",
     },
 
     nap: {
@@ -312,21 +312,21 @@ export const siteContent = {
   meta: {
     home: {
       title:
-        "Executive Coach Phoenix & Scottsdale, Arizona | Jack Rosenkrantz",
+        "Executive Coach Phoenix & Scottsdale | Jack Rosenkrantz",
       description:
-        "Status-fied but unfulfilled? Executive coaching for the person behind the performance. Nervous system, identity, and the patterns beneath your decisions. Phoenix & nationwide.",
+        "Executive coaching for founders and leaders ready to lead from who they actually are. Nervous system, identity, and the real work. Phoenix, AZ & nationwide.",
     },
     coaching: {
       title:
         "Executive Coaching for Founders & Leaders | Jack Rosenkrantz",
       description:
-        "Not tactics. Not cheerleading. Coaching that goes where most coaches won\u2019t\u2014your nervous system, your identity, the stories you\u2019ve mistaken for truth. Phoenix, Scottsdale & remote.",
+        "Coaching at the nervous system level\u2014where leadership patterns actually live. For founders and executives ready for honest work. Phoenix, Scottsdale & remote.",
     },
     about: {
       title:
         "About Jack Rosenkrantz | Executive Coach in Phoenix, Arizona",
       description:
-        "From VP of Sales to sobriety to embodied coaching. Jack Rosenkrantz coaches founders and executives back to themselves. Phoenix, Arizona & nationwide.",
+        "A decade in sales leadership, 500+ hours of yoga training, and somatic practices. Jack Rosenkrantz coaches executives in Phoenix, Arizona & nationwide.",
     },
     contact: {
       title:
