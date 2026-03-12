@@ -4,9 +4,10 @@
 
 @theme inline {
   /* ============================================
-     JACK OS DARK PALETTE
+     JACK OS DARK PALETTE — Sedona edition
      ============================================ */
   --color-sand: #1a1714;
+  --color-sand-warm: #211e18;
   --color-surface: #242019;
   --color-stone: #3d352f;
   --color-warm-gray: #958d86;
@@ -15,6 +16,8 @@
   --color-sage: #7a8b6f;
   --color-amber: #c4956a;
   --color-amber-light: #2e2418;
+  --color-terracotta: #c4654a;
+  --color-sunset: #d4885a;
 
   /* ============================================
      TYPOGRAPHY
@@ -123,7 +126,7 @@
   .accent-line {
     width: 48px;
     height: 2px;
-    background: var(--color-amber);
+    background: var(--color-terracotta);
   }
 
   .card-dark {
@@ -135,33 +138,33 @@
   }
 
   .card-dark:hover {
-    border-color: var(--color-amber);
+    border-color: var(--color-terracotta);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   }
 
-  /* Card with top amber accent border */
+  /* Card with top terracotta accent border */
   .card-accent {
     background: var(--color-surface);
     border: 1px solid var(--color-stone);
-    border-top: 2px solid var(--color-amber);
+    border-top: 2px solid var(--color-terracotta);
     border-radius: var(--radius-softer);
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 
   .card-accent:hover {
-    border-color: var(--color-amber);
+    border-color: var(--color-terracotta);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   }
 
   .section-alt {
-    background: var(--color-surface);
+    background: var(--color-sand-warm);
   }
 
   .hero-gradient {
-    background: radial-gradient(ellipse at 50% 30%, rgba(196, 149, 106, 0.06) 0%, transparent 60%);
+    background: radial-gradient(ellipse at 50% 30%, rgba(196, 101, 74, 0.08) 0%, rgba(212, 136, 90, 0.04) 40%, transparent 70%);
   }
 
   .tag {
@@ -170,7 +173,7 @@
     font-weight: 500;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-amber);
+    color: var(--color-terracotta);
     border: 1px solid var(--color-stone);
     padding: 0.25rem 0.75rem;
     border-radius: var(--radius-pill);
@@ -281,8 +284,8 @@
     transform: translateY(-50%);
     width: 2px;
     height: 60%;
-    background: var(--color-amber);
-    opacity: 0.6;
+    background: var(--color-terracotta);
+    opacity: 0.7;
   }
 
   /* Testimonial masonry grid */

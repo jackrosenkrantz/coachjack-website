@@ -81,7 +81,7 @@ export default function Coaching() {
           <h2 className="font-serif text-3xl md:text-4xl text-deep mb-4">
             {coaching.pattern.headline}
           </h2>
-          <p className="text-amber text-lg font-medium mb-10 font-serif italic">
+          <p className="text-terracotta text-lg font-medium mb-10 font-serif italic">
             {coaching.pattern.intro}
           </p>
         </FadeIn>
@@ -90,7 +90,7 @@ export default function Coaching() {
             <FadeIn key={i} delay={i * 100}>
               <div className="card-accent p-8 md:p-10">
                 <div className="w-8 h-8 rounded-full bg-amber-light flex items-center justify-center mb-5">
-                  <span className="text-amber font-serif text-sm font-medium">{i + 1}</span>
+                  <span className="text-terracotta font-serif text-sm font-medium">{i + 1}</span>
                 </div>
                 <h3 className="font-serif text-xl text-deep mb-4">{point.title}</h3>
                 <p className="text-earth leading-relaxed text-sm">{point.body}</p>
@@ -126,7 +126,7 @@ export default function Coaching() {
               <h2 className="font-serif text-3xl md:text-4xl text-deep mb-4">
                 {coaching.approach.headline}
               </h2>
-              <p className="text-amber text-lg font-medium font-serif italic">
+              <p className="text-terracotta text-lg font-medium font-serif italic">
                 {coaching.approach.intro}
               </p>
             </FadeIn>
